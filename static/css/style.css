@@ -2,6 +2,19 @@ body {
 
     background-color: lightblue;
 
+}
 
+/*Nav bar styles */
+nav ul a {
+    font-size: 1.6rem;
+    color: #fff;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+label.form-label {
+    font-size: 20px;
+    color: white;
 
 }
