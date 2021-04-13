@@ -55,7 +55,13 @@ def update_healthfood(request, healthfood_id):
 
 
 def delete_healthfood(request, healthfood_id):
-    delete_healthfood = get_object_or_404(healthfood, pk=healthfood_id)
-    return render(request, 'healthfood/delete-template.html', {
-        "healthfood": delete_healthfood
-    })
+    healthfood_to_delete = get_object_or_404(healthfood, pk=healthfood_id)
+    if request.method == 'POST':
+        healthfood_to_delete.delete()
+        return redirect(index)
+        
+    else:
+
+        return render(request, 'healthfood/delete-template.html', {
+            'healthfood': healthfood_to_delete
+        })
