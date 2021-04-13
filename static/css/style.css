@@ -40,3 +40,9 @@ input {
     color: black;
     padding: 5.6px, 14px;
 }
+
+.btn .btn-large .btn-small .btn-flat {
+
+    width: 100px;
+    height: 35px;
+}

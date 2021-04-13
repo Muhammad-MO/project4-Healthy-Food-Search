@@ -20,7 +20,8 @@
             <p class="card-title"> Description:{{healthfood.description}}</p>
 
         </div>
-        {{healthfood.title}} <a href="{% url 'update_healthfood_route' healthfood_id=healthfood.id %}">Edit</a>
+        <a href="{% url 'update_healthfood_route' healthfood_id=healthfood.id %}"
+            class="btn btn-primary btn-sm mb-2 mt-2">Edit</a>
 
     </div>
 
