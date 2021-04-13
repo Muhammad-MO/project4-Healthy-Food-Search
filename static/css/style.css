@@ -13,8 +13,30 @@ nav ul a {
     cursor: pointer;
 }
 
-label.form-label {
-    font-size: 20px;
-    color: white;
+/*form label styles*/
+label {
+    font-size: 2rem;
+    color: black;
+}
 
+/* uploadcare button styles*/
+.uploadcare--widget__button_type_open {
+    background: #157cfc;
+    color: black;
+    margin-bottom: 5px;
+    box-shadow: 2px 1px 2px 1px black;
+
+
+
+}
+
+/* submit button styles */
+
+input {
+    width: 139.52px;
+    height: 32.33px;
+    border-radius: 6px;
+    background-color: #157cfc;
+    color: black;
+    padding: 5.6px, 14px;
 }

@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect, reverse
+from django.shortcuts import render, HttpResponse, redirect, reverse, get_object_or_404
 from .models import healthfood
 from.forms import healthfoodForm
 
@@ -13,12 +13,12 @@ def index(request):
 
 
 def create_healthfood(request):
-    if request.method == 'POST': #1
-        create_form = healthfoodForm(request.POST) #2
+    if request.method == 'POST':  # 1
+        create_form = healthfoodForm(request.POST)  # 2
 
         # check if the form has valid values
-        if create_form.is_valid(): #3
-            create_form.save() #4
+        if create_form.is_valid():  # 3
+            create_form.save()  # 4
             return redirect(reverse(index))
         else:
             # 5. if does not have valid values, re-render the form
@@ -31,3 +31,24 @@ def create_healthfood(request):
             'form': create_form
         })
 
+
+def update_healthfood(request, healthfood_id):
+
+    if request.method == "POST":
+        healthfood_being_updated = get_object_or_404(
+            healthfood, pk=healthfood_id)
+        healthfood_Form = healthfoodForm(
+            request.POST, instance=healthfood_being_updated)
+
+        if healthfood_Form.is_valid():
+            healthfood_Form.save()
+        return redirect(reverse(index))
+
+    else:
+        healthfood_being_updated = get_object_or_404(
+            healthfood, pk=healthfood_id)
+
+        healthfood_Form = healthfoodForm(instance=healthfood_being_updated)
+        return render(request, 'healthfood/update-template.html', {
+            "form": healthfood_Form
+        })

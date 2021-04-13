@@ -3,6 +3,8 @@ from .models import healthfood
 from pyuploadcare.dj.forms import ImageField
 
 class healthfoodForm(forms.ModelForm):
+
+    
     class Meta:
         image = ImageField(label='')
 
