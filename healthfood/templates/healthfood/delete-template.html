@@ -1,0 +1,20 @@
+{% extends 'base.template.html' %}
+
+{% load static %}
+
+{%block content%}
+
+
+<h1>Delete book {{book.title}}</h1>
+<p>Are you sure?</p>
+<form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Yes" />
+    <a href="{% url ' healthindex' %}">No</a>
+</form>
+
+
+
+
+
+{%endblock%}

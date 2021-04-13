@@ -52,3 +52,10 @@ def update_healthfood(request, healthfood_id):
         return render(request, 'healthfood/update-template.html', {
             "form": healthfood_Form
         })
+
+
+def delete_healthfood(request, healthfood_id):
+    delete_healthfood = get_object_or_404(healthfood, pk=healthfood_id)
+    return render(request, 'healthfood/delete-template.html', {
+        "healthfood": delete_healthfood
+    })
