@@ -1,0 +1,30 @@
+{% extends 'base.template.html' %}
+
+{% load static %}
+
+{%block content%}
+<h1>Check out what previous buyers are saying</h1>
+
+
+
+<div style="display:flex;flex-wrap:wrap">
+
+    {%for reviews in reviews %}
+
+    <div class="card m-3" style="width:18rem;">
+        <div class="card-body">
+
+            <h5 class="card-title"> Name:{{reviews.name}}</h5>
+            <p class="card-title"> Description:{{reviews.reviews}}</p>
+
+        </div>
+        <a href="{% url 'update_healthfood_route' healthfood_id=healthfood.id %}"
+            class="btn btn-primary btn-sm mb-2 mt-2">Edit</a>
+        <a href="{% url 'delete_healthfood_route' healthfood_id=healthfood.id %}"
+            class="btn btn-primary btn-sm mb-2 mt-2">Delete</a>
+    </div>
+
+    {%endfor%}
+
+</div>
+{%endblock%}
