@@ -1,0 +1,20 @@
+{% extends 'base.template.html' %}
+{%load crispy_forms_tags%}
+{% load static %}
+
+
+{%block head%}
+{{ form.media }}
+{%endblock%}
+
+
+{%block content%}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form|crispy}}
+
+    <input type="Submit" />
+</form>
+
+{%endblock%}

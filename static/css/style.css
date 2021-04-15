@@ -63,3 +63,8 @@ input {
     box-shadow: 1px 1px 1px 1px black;
     margin-left: 5px;
 }
+
+.card {
+
+    border-radius: 25px;
+}
