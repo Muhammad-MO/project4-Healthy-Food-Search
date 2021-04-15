@@ -1,16 +1,19 @@
-from django.shortcuts import render, HttpResponse, redirect, reverse 
+from django.shortcuts import render, HttpResponse, redirect, reverse
 
 from django.shortcuts import get_object_or_404
 from .models import healthfood
-from.forms import healthfoodForm
+from.forms import healthfoodForm, SearchForm
 
 # Create your views here.
 
 
 def index(request):
+
+    search_form = SearchForm(request.GET)
     all_healthfood = healthfood.objects.all()
     return render(request, 'healthfood/index-template.html', {
-        'healthfood': all_healthfood
+        'healthfood': all_healthfood,
+        'search_form': search_form
     })
 
 

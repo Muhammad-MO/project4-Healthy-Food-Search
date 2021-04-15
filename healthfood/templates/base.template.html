@@ -51,13 +51,8 @@
     </ul>
 </header>
 <form method="GET">
-    <div>
-
-        <input type="text" name="food" class="form-control m-3"
-            placeholder="Search for your favourite food and see the nutrition content that suits you">
-
-    </div>
-    <input type="submit" value="search" class="btn btn-primary m-3" />
+    {{search_form|crispy}}
+    <input type="submit" value="Search" />
 </form>
 
 <body>

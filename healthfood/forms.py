@@ -10,3 +10,11 @@ class healthfoodForm(forms.ModelForm):
 
         model = healthfood
         fields = ('title', 'description', 'ISBN', 'image')
+
+
+
+    class SearchForm(forms.Form):
+           title = forms.CharField(max_length=100, required=False)
+           healthfood= forms.ModelChoiceField(queryset=healthfood.objects.all(), required=False)
+
+
