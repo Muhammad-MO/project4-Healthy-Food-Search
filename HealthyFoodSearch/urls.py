@@ -20,7 +20,7 @@ import reviews.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('healthfood/', healthfood.views.index, name="show_healthfood_route"),
+    path('', healthfood.views.index, name="show_healthfood_route"),
     path('reviews/', reviews.views.index),
     path('healthfood/create/', healthfood.views.create_healthfood),
     path('healthfood/update/<healthfood_id>',

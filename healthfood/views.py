@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.shortcuts import render, HttpResponse, redirect, reverse
 
 from django.shortcuts import get_object_or_404
@@ -8,12 +9,25 @@ from.forms import healthfoodForm, SearchForm
 
 
 def index(request):
-
-    search_form = SearchForm(request.GET)
     all_healthfood = healthfood.objects.all()
+
+    if request.GET:
+        # always true query:
+        queries = ~Q(pk__in=[])
+
+        # if a title is specified, add it to the query
+        if 'title' in request.GET and request.GET['title']:
+            title = request.GET['title']
+            queries = queries & Q(title__icontains=title)
+
+        all_healthfood = all_healthfood.filter(queries)
+
+        search_form = SearchForm(request.GET)
+
     return render(request, 'healthfood/index-template.html', {
         'healthfood': all_healthfood,
-        'search_form': search_form
+        'search_form': SearchForm,
+
     })
 
 
