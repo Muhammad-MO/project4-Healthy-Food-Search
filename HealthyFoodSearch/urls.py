@@ -14,12 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 import healthfood.views
 import reviews.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('', healthfood.views.index, name="show_healthfood_route"),
     path('reviews/', reviews.views.index),
     path('healthfood/create/', healthfood.views.create_healthfood),
@@ -27,6 +28,7 @@ urlpatterns = [
          healthfood.views.update_healthfood,  name="update_healthfood_route"),
     path('healthfood/delete/<healthfood_id>',
          healthfood.views.delete_healthfood, name='delete_healthfood_route'),
-    path('reviews/create/', reviews.views.create_reviews)
+    path('reviews/create/', reviews.views.create_reviews),
+
 
 ]

@@ -5,6 +5,15 @@
 
 {%block content%}
 <h1>Search your favourite Health Food</h1>
+
+
+{% if request.user.is_authenticated  %}
+<p>Welcome {{request.user}}</p>
+{% else %}
+<p>Please <a href="/accounts/login">Login</a></p>
+{%endif%}
+
+
 <form method="GET">
 
     {{search_form|crispy}}
