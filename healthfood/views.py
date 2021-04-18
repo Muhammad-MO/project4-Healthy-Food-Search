@@ -31,6 +31,7 @@ def index(request):
 
     })
 
+
 @login_required
 def create_healthfood(request):
     if request.method == 'POST':  # 1
