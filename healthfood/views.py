@@ -1,9 +1,10 @@
+from django.contrib.auth.decorators import login_required, permission_required
 from django.db.models import Q
 from django.shortcuts import render, HttpResponse, redirect, reverse
-
 from django.shortcuts import get_object_or_404
 from .models import healthfood
 from.forms import healthfoodForm, SearchForm
+
 
 # Create your views here.
 
@@ -30,7 +31,7 @@ def index(request):
 
     })
 
-
+@login_required
 def create_healthfood(request):
     if request.method == 'POST':  # 1
         create_form = healthfoodForm(request.POST)  # 2
