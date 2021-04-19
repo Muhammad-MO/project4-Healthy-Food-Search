@@ -4,17 +4,18 @@
 {% load crispy_forms_tags %}
 
 {%block content%}
-<h1>Search your favourite Health Food</h1>
-
-
-
 
 {% if request.user.is_authenticated  %}
-<p>Welcome {{request.user}}</p>
+<h4>Welcome {{request.user}}</h4>
 {% else %}
-<p>Please <a href="/accounts/login">Login</a></p>
+<a href="/accounts/login" class="btn btn-primary btn-sm mb-2 mt-2" s>Login</a>
 {%endif%}
 
+<a href="/accounts/logout" class="btn btn-primary btn-sm mb-2 mt-2">Logout</a>
+
+<a href="/accounts/signup" class="btn btn-info btn-sm mb-2 mt-2"> sign up</a>
+
+<h1>Search your favourite Health Food</h1>
 
 <form method="GET">
 

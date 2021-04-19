@@ -43,9 +43,8 @@ input {
 
 
 
-.btn,
-.btn-large,
-.btn-small .btn-primary {
+
+.btn-primary {
     text-decoration: none;
     color: black;
     background-color: #157cfc;
@@ -67,4 +66,63 @@ input {
 .card {
 
     border-radius: 15px;
+}
+
+a.btn.btn-info {
+
+    text-decoration: none;
+    color: black;
+    background-color: #157cfc;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
+    width: 180px;
+    height: 32.33px;
+    font-size: 12px;
+    border-radius: 5px;
+    vertical-align: middle;
+    padding: 0px 20px 7px 20px;
+    box-shadow: 1px 1px 1px 1px black;
+    margin-left: 5px;
+}
+
+input.btn.btn-info {
+    text-decoration: none;
+    color: black;
+    background-color: #157cfc;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
+    width: 180px;
+    height: 32.33px;
+    font-size: 12px;
+    border-radius: 5px;
+    vertical-align: middle;
+    padding: 0px 20px 7px 20px;
+    box-shadow: 1px 1px 1px 1px black;
+    margin-left: 5px;
+}
+
+button.btn.btn-info {
+
+    text-decoration: none;
+    color: black;
+    background-color: #157cfc;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
+    width: 100px;
+    height: 32.33px;
+    font-size: 12px;
+    border-radius: 5px;
+    vertical-align: middle;
+    padding: 0px 20px 7px 20px;
+    box-shadow: 1px 1px 1px 1px black;
+    margin-left: 5px;
 }
