@@ -1,10 +1,11 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required, permission_required
 from django.shortcuts import render, HttpResponse, redirect, reverse
 from .models import reviews
 from.forms import reviewsForm
 # Create your views here.
 
-
+@login_required
 def index(request):
     all_reviews = reviews.objects.all()
     return render(request, 'reviews/index-template.html', {
@@ -13,6 +14,7 @@ def index(request):
     })
 
 
+@login_required
 def create_reviews(request):
     if request.method == 'POST':
         create_form = reviewsForm(request.POST)
