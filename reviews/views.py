@@ -5,6 +5,7 @@ from .models import reviews
 from.forms import reviewsForm
 # Create your views here.
 
+
 @login_required
 def index(request):
     all_reviews = reviews.objects.all()
