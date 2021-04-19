@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, HttpResponse, redirect, reverse
 from .models import reviews
 from.forms import reviewsForm
@@ -18,6 +19,10 @@ def create_reviews(request):
 
         if create_form.is_valid():
             create_form.save()
+
+            messages.success(
+                request, f"New review {create_form.cleaned_data['name']} has been created")
+
             return redirect(reverse(index))
         else:
 
