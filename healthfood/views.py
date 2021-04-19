@@ -51,14 +51,14 @@ def create_healthfood(request):
                 'form': create_form
             })
     else:
-        create_form = althfoodForm()
+        create_form = hethfoodForm()
         return render(request, 'healthfood/create.template.html', {
             'form': create_form
         })
 
 
 def update_healthfood(request, healthfood_id):
-    healthfood_being_updated = get_ob_or_404(healthfood, pk = healthfood_id)
+    healthfood_being_updated = get_ob404(healthfood, pk = healthfood_id)
     if request.method == "POST":
         healthfood_Form = althfoodForm(
             request.POST, instance = healthfood_being_updated)
@@ -76,14 +76,14 @@ def update_healthfood(request, healthfood_id):
             })
 
     else:
-        healthfood_Form=healthfoodForm(instance = healthfood_being_updated)
+        healthfood_Form=h aealfoodForm(instance = healthfood_being_updated)
         return render(request, 'healthfood/update-template.html', {
             "form": healthfood_Form
         })
 
 
 def delete_healthfood(request, healthfood_id):
-    healthfood_to_delete = t_object_or_404(healthfood, pk = healthfood_id)
+    healthfood_to_delete = get_ject_or_404(healthfood, pk = healthfood_id)
     if request.method == 'POST':
         healthfood_to_delete.delete()
         return redirect(index)
