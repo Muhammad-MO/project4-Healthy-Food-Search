@@ -10,6 +10,5 @@ class reviews(models.Model):
     date = models.DateField(default=datetime.date.today)
     reviews = models.TextField(blank=False)
 
-
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
