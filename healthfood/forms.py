@@ -1,5 +1,5 @@
 from django import forms
-from .models import healthfood, Manufacturer
+from .models import healthfood
 from pyuploadcare.dj.forms import ImageField
 
 

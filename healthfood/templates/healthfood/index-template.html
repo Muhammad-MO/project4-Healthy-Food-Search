@@ -28,13 +28,13 @@
 
     {%for healthfood in healthfood %}
 
+
     <div class="card m-3" style="width:18rem;">
         <div class="card-body">
             <img class="card-img-top" src="{{healthfood.image.cdn_url}}" alt="image">
             <h5 class="card-title"> Name:{{healthfood.title}}</h5>
             <p class="card-title"> Description:{{healthfood.description}}</p>
-            <p class="card-title"> Manufacturer:{{Manufacturer.name}}</p>
-
+            <p class="card-title"> Manufacturer:{{healthfood.manufacturer}}</p>
         </div>
         <a href="{% url 'update_healthfood_route' healthfood_id=healthfood.id %}"
             class="btn btn-primary btn-sm mb-2 mt-2">Edit</a>
@@ -42,7 +42,11 @@
             class="btn btn-primary btn-sm mb-2 mt-2">Delete</a>
     </div>
 
+
+
     {%endfor%}
+
+
 
 </div>
 {%endblock%}
