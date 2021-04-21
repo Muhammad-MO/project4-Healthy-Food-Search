@@ -1,5 +1,5 @@
 from django import forms
-from .models import healthfood
+from .models import healthfood, Manufacturer
 from pyuploadcare.dj.forms import ImageField
 
 
@@ -14,5 +14,5 @@ class healthfoodForm(forms.ModelForm):
 
 class SearchForm(forms.Form):
     title = forms.CharField(max_length=100, required=False)
-    healthfood = forms.ModelChoiceField(
-        queryset=healthfood.objects.all(), required=False)
+    manufacturer = forms.ModelChoiceField(
+        queryset=Manufacturer.objects.all(), required=False)

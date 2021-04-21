@@ -16,7 +16,7 @@ class healthfood(models.Model):
     ISBN = models.CharField(blank=False, max_length=255)
     description = models.TextField(blank=False)
     image = ImageField(blank=True, manual_crop="")
-    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CharField)
+    manufacturer = models.ForeignKey(Manufacturer, on_delete=models.CASCADE)
 
     def __str__(self):
 

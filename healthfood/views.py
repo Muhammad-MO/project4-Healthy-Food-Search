@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.db.models import Q
 from django.shortcuts import render, HttpResponse, redirect, reverse
 from django.shortcuts import get_object_or_404
-from .models import healthfood
+from .models import healthfood, Manufacturer
 from.forms import healthfoodForm, SearchForm
 
 
@@ -23,13 +23,19 @@ def index(request):
             title = request.GET['title']
             queries = queries & Q(title__icontains=title)
 
-        all_healthfood = all_healthfood.filter(queries)
+        if 'manufacturer' in request.GET and request.GET['manufacturer']:
+            print("adding manufacturer")
+            manufacturer = request.GET['manufacturer']
+            queries = queries & Q(manufacturer__in=manufacturer)
 
+        all_healthfood = all_healthfood.filter(queries)
+        manufacturer = Manufacturer.objects.all()
         search_form = SearchForm(request.GET)
 
     return render(request, 'healthfood/index-template.html', {
         'healthfood': all_healthfood,
-        'search_form': SearchForm,
+        'manufacturer': Manufacturer,
+        'search_form': SearchForm
 
     })
 
