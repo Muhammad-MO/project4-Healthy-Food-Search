@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required, permission_required
 from django.db.models import Q
 from django.shortcuts import render, HttpResponse, redirect, reverse
 from django.shortcuts import get_object_or_404
-from .models import healthfood, Manufacturer
+from .models import healthfood
 from.forms import healthfoodForm, SearchForm
 
 
@@ -23,19 +23,19 @@ def index(request):
             title = request.GET['title']
             queries = queries & Q(title__icontains=title)
 
-        if 'manufacturer' in request.GET and request.GET['manufacturer']:
-            print("adding manufacturer")
-            manufacturer = request.GET['manufacturer']
-            queries = queries & Q(manufacturer__in=manufacturer)
+        if 'description' in request.GET and request.GET['description']:
+            description = request.GET['description']
+            queries = queries & Q(description__icontains=description)
 
         all_healthfood = all_healthfood.filter(queries)
-        manufacturer = Manufacturer.objects.all()
+
         search_form = SearchForm(request.GET)
 
     return render(request, 'healthfood/index-template.html', {
         'healthfood': all_healthfood,
-        'manufacturer': Manufacturer,
         'search_form': SearchForm
+
+
 
     })
 
@@ -99,3 +99,10 @@ def delete_healthfood(request, healthfood_id):
         return render(request, 'healthfood/delete-template.html', {
             'healthfood': healthfood_to_delete
         })
+
+
+def view_healthfood_details(request, healthfood_id):
+    healthfood = get_object_or_404(healthfood, pk=healthfood_id)
+    return render(request, 'healthfood/details.template.html', {
+        'healthfood': healthfood
+    })

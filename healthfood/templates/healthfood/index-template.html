@@ -33,7 +33,7 @@
             <img class="card-img-top" src="{{healthfood.image.cdn_url}}" alt="image">
             <h5 class="card-title"> Name:{{healthfood.title}}</h5>
             <p class="card-title"> Description:{{healthfood.description}}</p>
-            <p class="card-title"> Manufacturer:{{healthfood.manufacturer.title}}</p>
+            <p class="card-title"> Maker:{{healthfood.maker}}</p>
         </div>
         <a href="{% url 'update_healthfood_route' healthfood_id=healthfood.id %}"
             class="btn btn-primary btn-sm mb-2 mt-2">Edit</a>

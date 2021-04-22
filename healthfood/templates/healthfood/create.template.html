@@ -1,5 +1,5 @@
 {% extends 'base.template.html' %}
-{%load crispy_forms_tags%}
+
 {% load static %}
 
 
@@ -12,8 +12,8 @@
 
 <form method="POST">
     {% csrf_token %}
-    {{ form|crispy}}
 
+    {{ form.as_p}}
     <input type="Submit" />
 </form>
 
