@@ -9,7 +9,9 @@ class healthfoodForm(forms.ModelForm):
         image = ImageField(label='')
 
         model = healthfood
-        fields = ('title', 'description', 'ISBN', 'image', 'maker')
+        fields = ('title', 'description', 'image', 'maker',
+                  'serving', 'country', 'ingredients', 'nutrition_carbs', 'nutrition_protein',
+                  'nutrition_fats')
 
 
 class SearchForm(forms.Form):

@@ -1,0 +1,82 @@
+{% extends 'base.template.html' %}
+
+{% load static %}
+
+{% block content %}
+<h1>{{healthfood.title}}</h1>
+
+
+
+<div class="card m-3" style="width:18rem;">
+    <div class="card-body">
+        <img class="card-img-top" src="{{healthfood.image.cdn_url}}" alt="image">
+        <h5 class="card-title"> Name:{{healthfood.title}}</h5>
+
+        <p>
+            Description:{{healthfood.description}}
+        </p>
+
+        <p>
+            Producer:{{healthfood.maker}}
+        </p>
+
+        <p>
+            Country:{{healthfood.country}}
+        </p>
+
+        <p>
+            Ingredients:{{healthfood.ingredients}}
+        </p>
+    </div>
+
+</div>
+
+
+<div class="card m-3" style="width:18rem;">
+    <div class="card-body">
+
+        <h4 class="card-title"> Macros Information</h4>
+
+        <h5>
+            Servings: {{healthfood.serving}}
+        </h5>
+
+        <p>
+            Crabohydrates: {{healthfood.nutrition_carbs}}
+        </p>
+
+        <p>
+            Protein: {{healthfood.nutrition_protein}}
+        </p>
+
+        <p>
+            Fats:{{healthfood.nutrition_fats}}
+        </p>
+    </div>
+
+</div>
+
+
+
+<!--<h2 class="m-3">Macros Information</h2>
+
+<table class="m-4">
+    <tr>
+        <th>Servings: {{healthfood.serving}}</th>
+
+    </tr>
+    <tr>
+        <td>Crabohydrates: {{healthfood.nutrition_carbs}}</td>
+    </tr>
+
+    <tr>
+        <td> Protein: {{healthfood.nutrition_protein}}</td>
+    </tr>
+
+    <tr>
+        <td> Fats:{{healthfood.nutrition_fats}}</td>
+    </tr>
+
+</table>-->
+
+{% endblock %}

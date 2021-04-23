@@ -1,3 +1,4 @@
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
 from django.db.models import Q
@@ -34,9 +35,6 @@ def index(request):
     return render(request, 'healthfood/index-template.html', {
         'healthfood': all_healthfood,
         'search_form': SearchForm
-
-
-
     })
 
 
@@ -102,7 +100,8 @@ def delete_healthfood(request, healthfood_id):
 
 
 def view_healthfood_details(request, healthfood_id):
-    healthfood = get_object_or_404(healthfood, pk=healthfood_id)
-    return render(request, 'healthfood/details.template.html', {
-        'healthfood': healthfood
+    healthfood_details = get_object_or_404(healthfood, pk=healthfood_id)
+    return render(request, 'healthfood/details-template.html', {
+        'healthfood': healthfood_details,
+
     })
