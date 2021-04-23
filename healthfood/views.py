@@ -11,7 +11,6 @@ from.forms import healthfoodForm, SearchForm
 # Create your views here.
 
 
-@login_required
 def index(request):
     all_healthfood = healthfood.objects.all()
 
@@ -88,6 +87,7 @@ def update_healthfood(request, healthfood_id):
         })
 
 
+@login_required
 def delete_healthfood(request, healthfood_id):
     healthfood_to_delete = get_object_or_404(healthfood, pk=healthfood_id)
     if request.method == 'POST':
@@ -99,6 +99,7 @@ def delete_healthfood(request, healthfood_id):
         })
 
 
+@login_required
 def view_healthfood_details(request, healthfood_id):
     healthfood_details = get_object_or_404(healthfood, pk=healthfood_id)
     return render(request, 'healthfood/details-template.html', {

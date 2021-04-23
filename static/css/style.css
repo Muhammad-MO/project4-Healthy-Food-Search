@@ -66,6 +66,7 @@ input {
 .card {
 
     border-radius: 15px;
+    width: 500px;
 }
 
 a.btn.btn-info {
@@ -125,4 +126,10 @@ button.btn.btn-info {
     padding: 0px 20px 7px 20px;
     box-shadow: 1px 1px 1px 1px black;
     margin-left: 5px;
+}
+
+.card {
+
+
+    right: 20px;
 }

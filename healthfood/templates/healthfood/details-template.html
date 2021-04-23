@@ -6,54 +6,55 @@
 <h1>{{healthfood.title}}</h1>
 
 
+<div style="display:flex;flex-wrap:wrap">
+    <div class="card m-3" style="width:18rem;">
+        <div class="card-body">
+            <img class="card-img-top" src="{{healthfood.image.cdn_url}}" alt="image">
+            <h5 class="card-title"> Name:{{healthfood.title}}</h5>
 
-<div class="card m-3" style="width:18rem;">
-    <div class="card-body">
-        <img class="card-img-top" src="{{healthfood.image.cdn_url}}" alt="image">
-        <h5 class="card-title"> Name:{{healthfood.title}}</h5>
+            <p>
+                Description:{{healthfood.description}}
+            </p>
 
-        <p>
-            Description:{{healthfood.description}}
-        </p>
+            <p>
+                Producer:{{healthfood.maker}}
+            </p>
 
-        <p>
-            Producer:{{healthfood.maker}}
-        </p>
+            <p>
+                Country:{{healthfood.country}}
+            </p>
 
-        <p>
-            Country:{{healthfood.country}}
-        </p>
+            <p>
+                Ingredients:{{healthfood.ingredients}}
+            </p>
+        </div>
 
-        <p>
-            Ingredients:{{healthfood.ingredients}}
-        </p>
     </div>
 
-</div>
 
+    <div class="card m-3" style="width:18rem;">
+        <div class="card-body">
 
-<div class="card m-3" style="width:18rem;">
-    <div class="card-body">
+            <h4 class="card-title"> Macros Information</h4>
 
-        <h4 class="card-title"> Macros Information</h4>
+            <h5>
+                Servings: {{healthfood.serving}}
+            </h5>
 
-        <h5>
-            Servings: {{healthfood.serving}}
-        </h5>
+            <p>
+                Crabohydrates: {{healthfood.nutrition_carbs}}
+            </p>
 
-        <p>
-            Crabohydrates: {{healthfood.nutrition_carbs}}
-        </p>
+            <p>
+                Protein: {{healthfood.nutrition_protein}}
+            </p>
 
-        <p>
-            Protein: {{healthfood.nutrition_protein}}
-        </p>
+            <p>
+                Fats:{{healthfood.nutrition_fats}}
+            </p>
+        </div>
 
-        <p>
-            Fats:{{healthfood.nutrition_fats}}
-        </p>
     </div>
-
 </div>
 
 
