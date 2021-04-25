@@ -1,5 +1,6 @@
 {% extends 'base.template.html' %}
 
+{% load crispy_forms_tags %}
 {% load static %}
 
 {% block content %}
@@ -57,27 +58,5 @@
     </div>
 </div>
 
-
-
-<!--<h2 class="m-3">Macros Information</h2>
-
-<table class="m-4">
-    <tr>
-        <th>Servings: {{healthfood.serving}}</th>
-
-    </tr>
-    <tr>
-        <td>Crabohydrates: {{healthfood.nutrition_carbs}}</td>
-    </tr>
-
-    <tr>
-        <td> Protein: {{healthfood.nutrition_protein}}</td>
-    </tr>
-
-    <tr>
-        <td> Fats:{{healthfood.nutrition_fats}}</td>
-    </tr>
-
-</table>-->
 
 {% endblock %}

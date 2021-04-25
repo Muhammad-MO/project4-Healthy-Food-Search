@@ -6,22 +6,18 @@
 {%block content%}
 
 {% if request.user.is_authenticated  %}
-<h4>Welcome {{request.user}}</h4>
+<h4 class="m-3">Welcome {{request.user}}</h4>
 {% else %}
-<a href="/accounts/login" class="btn btn-primary btn-sm mb-2 mt-2" s>Login</a>
+<a href="/accounts/login" class="btn btn-primary btn-sm mb-2 mt-2" style="position:absolute; right:10px;">Login</a>
 {%endif%}
 
-<a href="/accounts/logout" class="btn btn-primary btn-sm mb-2 mt-2">Logout</a>
+<a href="/accounts/logout" class="btn btn-primary btn-sm mb-2 mt-2" style="position:absolute; right:130px;">Logout</a>
 
-<a href="/accounts/signup" class="btn btn-info btn-sm mb-2 mt-2"> sign up</a>
-
-<h1>Search your favourite Health Food</h1>
 
 <form method="GET">
     {{search_form|crispy}}
-    <input type="submit" value="Search" />
+    <input type="submit" value="Search"/>
 </form>
-
 
 <div style="display:flex;flex-wrap:wrap">
 
@@ -35,21 +31,21 @@
 
             <p class="card-title"> Producer:{{healthfood.maker}}</p>
         </div>
-        <div style="display:flex;flex-wrap:wrap">
-            <a href="{% url 'view_healthfood_details' healthfood_id=healthfood.id %}"
-                class="btn btn-primary btn-sm mb-2 mt-2">Details</a>
 
-            <a href="{% url 'update_healthfood_route' healthfood_id=healthfood.id %}"
-                class="btn btn-primary btn-sm mb-2 mt-2">Edit</a>
-            <a href="{% url 'delete_healthfood_route' healthfood_id=healthfood.id %}"
-                class="btn btn-primary btn-sm mb-2 mt-2">Delete</a>
-        </div>
+        <a href="{% url 'view_healthfood_details' healthfood_id=healthfood.id %}"
+            class="btn btn-primary btn-sm mb-2 mt-2">Details</a>
 
-
-
-        {%endfor%}
-
-
-
+        <a href="{% url 'update_healthfood_route' healthfood_id=healthfood.id %}"
+            class="btn btn-primary btn-sm mb-2 mt-2">Edit</a>
+        <a href="{% url 'delete_healthfood_route' healthfood_id=healthfood.id %}"
+            class="btn btn-primary btn-sm mb-2 mt-2">Delete</a>
     </div>
-    {%endblock%}
+
+
+
+    {%endfor%}
+
+
+
+</div>
+{%endblock%}

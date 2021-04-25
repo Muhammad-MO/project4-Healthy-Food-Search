@@ -53,9 +53,9 @@ input {
     -webkit-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;
     cursor: pointer;
-    width: 100px;
+    width: 110px;
     height: 32.33px;
-    font-size: 12px;
+    font-size: 18px;
     border-radius: 5px;
     vertical-align: middle;
     padding: 0px 20px 7px 20px;
@@ -67,6 +67,7 @@ input {
 
     border-radius: 15px;
     width: 500px;
+  
 }
 
 a.btn.btn-info {
@@ -81,7 +82,7 @@ a.btn.btn-info {
     cursor: pointer;
     width: 180px;
     height: 32.33px;
-    font-size: 12px;
+    font-size: 18px;
     border-radius: 5px;
     vertical-align: middle;
     padding: 0px 20px 7px 20px;
@@ -89,24 +90,7 @@ a.btn.btn-info {
     margin-left: 5px;
 }
 
-input.btn.btn-info {
-    text-decoration: none;
-    color: black;
-    background-color: #157cfc;
-    text-align: center;
-    letter-spacing: .5px;
-    -webkit-transition: background-color .2s ease-out;
-    transition: background-color .2s ease-out;
-    cursor: pointer;
-    width: 180px;
-    height: 32.33px;
-    font-size: 12px;
-    border-radius: 5px;
-    vertical-align: middle;
-    padding: 0px 20px 7px 20px;
-    box-shadow: 1px 1px 1px 1px black;
-    margin-left: 5px;
-}
+
 
 button.btn.btn-info {
 
@@ -118,9 +102,9 @@ button.btn.btn-info {
     -webkit-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;
     cursor: pointer;
-    width: 100px;
+    width: 120px;
     height: 32.33px;
-    font-size: 12px;
+    font-size: 16px;
     border-radius: 5px;
     vertical-align: middle;
     padding: 0px 20px 7px 20px;
@@ -128,8 +112,126 @@ button.btn.btn-info {
     margin-left: 5px;
 }
 
-.card {
 
+input#id_title.textinput.textinput
 
-    right: 20px;
+{
+    background-color:white;
+    border:none;
+    width:300px;
+    margin-bottom:5px;
+     border-radius:0px
+    
 }
+
+textarea{
+
+    border:solid black 1px;
+    background-color: white;
+    height:50px;
+    
+}
+
+input#id_title{
+    
+    
+    border:solid black 0.5px;
+    background-color: white;
+    border-radius:0px;
+    width:300px;
+    margin:3px;
+}
+
+input#id_country{
+    
+    border:none
+    border-bottom:solid black 0.5px;
+    background-color: white;
+    width:100px;
+    border-radius:0px
+    
+}
+
+input#id_ingredients{
+    
+    border:none
+    border-bottom:solid black 0.5px;
+    background-color: white;
+    width:100px;
+    border-radius:0px
+    
+}
+
+input#id_nutrition_carbs{
+    
+    border:none
+    border-bottom:solid black 0.5px;
+    background-color: white;
+    width:100px;
+    border-radius:0px
+    
+}
+input#id_nutrition_protein{
+    
+    border:none
+    border-bottom:solid black 0.5px;
+    background-color: white;
+    width:100px;
+    border-radius:0px
+}
+input#id_nutrition_fats{
+    
+    border:none
+    border-bottom:solid black 0.5px;
+    background-color: white;
+    width:100px;
+    border-radius:0px
+}
+
+input#id_email {
+    
+    border:none
+    border-bottom:solid black 0.5px;
+    background-color: white;
+    width:200px;
+    border-radius:0px
+}
+
+input#id_email2 {
+    
+    border:none
+    border-bottom:solid black 0.5px;
+    background-color: white;
+    width:200px;
+    border-radius:0px
+}
+
+input#id_username {
+    
+    border:none
+    border-bottom:solid black 0.5px;
+    background-color: white;
+    width:200px;
+    border-radius:0px
+}
+
+input#id_password1 {
+    
+    border:none
+    border-bottom:solid black 0.5px;
+    background-color: white;
+    width:200px;
+    border-radius:0px
+}
+
+input#id_password2 {
+    
+    border:none
+    border-bottom:solid black 0.5px;
+    background-color: white;
+    width:200px;
+    border-radius:0px
+}
+
+
+
