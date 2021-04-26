@@ -33,15 +33,13 @@ label {
 /* submit button styles */
 
 input {
-    width: 90px;
+    width: 110px;
     height: 32.33px;
     border-radius: 6px;
     background-color: #157cfc;
     color: black;
-    padding: 5.6px, 14px;
+    padding: 0px, 20px, 7px;
 }
-
-
 
 
 .btn-primary {
@@ -67,7 +65,7 @@ input {
 
     border-radius: 15px;
     width: 500px;
-  
+
 }
 
 a.btn.btn-info {
@@ -113,125 +111,131 @@ button.btn.btn-info {
 }
 
 
-input#id_title.textinput.textinput
-
-{
-    background-color:white;
-    border:none;
-    width:300px;
-    margin-bottom:5px;
-     border-radius:0px
-    
+input#id_title.textinput.textinput {
+    background-color: white;
+    border: none;
+    width: 300px;
+    margin-bottom: 5px;
+    border-radius: 0px
 }
 
-textarea{
+textarea {
 
-    border:solid black 1px;
+    border: none;
     background-color: white;
-    height:50px;
-    
-}
+    height: 50px;
 
-input#id_title{
-    
-    
-    border:solid black 0.5px;
-    background-color: white;
-    border-radius:0px;
-    width:300px;
-    margin:3px;
 }
 
-input#id_country{
-    
-    border:none
-    border-bottom:solid black 0.5px;
+input#id_title {
+
+
+    border: none;
     background-color: white;
-    width:100px;
-    border-radius:0px
-    
+    border-radius: 0px;
+    width: 300px;
+    margin: 3px;
 }
 
-input#id_ingredients{
-    
-    border:none
-    border-bottom:solid black 0.5px;
+input#id_country {
+
+    border: none;
     background-color: white;
-    width:100px;
-    border-radius:0px
-    
+    width: 100px;
+    border-radius: 0px
 }
 
-input#id_nutrition_carbs{
-    
-    border:none
-    border-bottom:solid black 0.5px;
+input#id_ingredients {
+
+    border: none;
     background-color: white;
-    width:100px;
-    border-radius:0px
-    
+    width: 100px;
+    border-radius: 0px
 }
-input#id_nutrition_protein{
-    
-    border:none
-    border-bottom:solid black 0.5px;
+
+input#id_nutrition_carbs {
+
+    border: none;
     background-color: white;
-    width:100px;
-    border-radius:0px
+    width: 100px;
+    border-radius: 0px
 }
-input#id_nutrition_fats{
-    
-    border:none
-    border-bottom:solid black 0.5px;
+
+input#id_nutrition_protein {
+
+    border: none;
     background-color: white;
-    width:100px;
-    border-radius:0px
+    width: 100px;
+    border-radius: 0px;
+}
+
+input#id_nutrition_fats {
+
+    border: none;
+    background-color: white;
+    width: 100px;
+    border-radius: 0px;
 }
 
 input#id_email {
-    
-    border:none
-    border-bottom:solid black 0.5px;
+    border: none;
     background-color: white;
-    width:200px;
-    border-radius:0px
+    width: 200px;
+    border-radius: 0px;
 }
 
 input#id_email2 {
-    
-    border:none
-    border-bottom:solid black 0.5px;
+
+    border: none;
     background-color: white;
-    width:200px;
-    border-radius:0px
+    width: 200px;
+    border-radius: 0px;
 }
 
 input#id_username {
-    
-    border:none
-    border-bottom:solid black 0.5px;
+
+    border: none;
     background-color: white;
-    width:200px;
-    border-radius:0px
+    width: 200px;
+    border-radius: 0px;
 }
 
 input#id_password1 {
-    
-    border:none
-    border-bottom:solid black 0.5px;
+
+    border: none;
     background-color: white;
-    width:200px;
-    border-radius:0px
+    width: 200px;
+    border-radius: 0px;
 }
 
 input#id_password2 {
-    
-    border:none
-    border-bottom:solid black 0.5px;
+
+    border: none;
     background-color: white;
-    width:200px;
-    border-radius:0px
+    width: 200px;
+    border-radius: 0px;
+}
+
+input#id_Email {
+    border: none;
+    background-color: white;
+    width: 200px;
+    border-radius: 0px;
+}
+
+
+input#id_name {
+    border: none;
+    background-color: white;
+    width: 200px;
+    border-radius: 0px;
 }
 
 
 
+input#id_date {
+    border: none;
+    background-color: white;
+    width: 200px;
+    border-radius: 0px;
+}

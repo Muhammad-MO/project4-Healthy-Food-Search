@@ -18,10 +18,14 @@
             <p class="card-title"> Description:{{reviews.reviews}}</p>
             <p class="card-title"> Email:{{reviews.Email}}</p>
             <p class="card-title"> Date:{{reviews.date}}</p>
-
+            <p class="card-title"> Healthfood:{{reviews.healthfood}}</p>
         </div>
 
+        <a href="{% url 'update_reviews_route' reviews_id=reviews.id %}"
+            class="btn btn-primary btn-sm mb-2 mt-2">Edit</a>
 
+        <a href="{% url 'delete_reviews_route' reviews_id=reviews.id %}" .
+            class="btn btn-primary btn-sm mb-2 mt-2">Delete</a>
     </div>
 
     {%endfor%}
