@@ -1,0 +1,38 @@
+{% extends 'base.template.html' %}
+{% load static %uy}
+{% load crispy_forms_tags %}
+
+
+
+{%block content%}
+
+<a href="/accounts/login" class="btn btn-primary btn-sm mb-2 mt-2" style="position:absolute; right:10px;">Login</a>
+
+
+<a href="/accounts/logout" class="btn btn-primary btn-sm mb-2 mt-2" style="position:absolute; right:130px;">Logout</a>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <h3>Welcome to your one stop healthfood e-mart.</h3>
+
+            <h3>Check our our latest in-store goods</h3>
+
+            <h1> Fresh,healthy food for your daily needs</h1>
+
+            <h2>Shop for your produce today!</h2>
+
+        </div>
+
+        <div class="col order-1">
+
+            <img src="/static/images/healthy2.jpeg" class="img-fluid" alt="Responsive image">
+
+        </div>
+
+
+    </div>
+</div>
+
+{%endblock%}

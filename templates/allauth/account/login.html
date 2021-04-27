@@ -7,7 +7,8 @@
 
 {% block content %}
 
-<h1>Please login with your username and password to proceed.</h1>
+
+
 
 {% get_providers as socialaccount_providers %}
 
@@ -33,6 +34,9 @@
     <a class="btn btn-info btn-sm mb-2 mt-2" href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</h6>
 {% endif %}
 
+
+
+
 <form class="login" method="POST" action="{% url 'account_login' %}">
 
     {% csrf_token %}
@@ -40,8 +44,10 @@
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
-    <a class="btn btn-info mb-2 mt-2" style="width:200px;" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+    <a class="btn btn-info mb-2 mt-2" style="width:200px;"
+        href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
     <button class="btn btn-primary btn-sm mb-2 mt-2" type="submit">{% trans "Sign In" %}</button>
 </form>
+
 
 {% endblock %}

@@ -16,8 +16,9 @@
 
 <form method="GET">
     {{search_form|crispy}}
-    <input type="submit" value="Search"/>
+    <input type="submit" value="Search" />
 </form>
+
 
 <div style="display:flex;flex-wrap:wrap">
 
@@ -26,19 +27,17 @@
 
     <div class="card m-3" style="width:18rem;">
         <div class="card-body">
-            <img class="card-img-top" src="{{healthfood.image.cdn_url}}" alt="image">
+            <a href="{% url 'view_healthfood_details' healthfood_id=healthfood.id %}"><img class="card-img-top"
+                    src="{{healthfood.image.cdn_url}}" alt="image"></a>
             <h5 class="card-title"> Name:{{healthfood.title}}</h5>
 
             <p class="card-title"> Producer:{{healthfood.maker}}</p>
+            <p>click on image to see more information</p>
         </div>
 
-        <a href="{% url 'view_healthfood_details' healthfood_id=healthfood.id %}"
-            class="btn btn-primary btn-sm mb-2 mt-2">Details</a>
 
-        <a href="{% url 'update_healthfood_route' healthfood_id=healthfood.id %}"
-            class="btn btn-primary btn-sm mb-2 mt-2">Edit</a>
-        <a href="{% url 'delete_healthfood_route' healthfood_id=healthfood.id %}"
-            class="btn btn-primary btn-sm mb-2 mt-2">Delete</a>
+
+
     </div>
 
 

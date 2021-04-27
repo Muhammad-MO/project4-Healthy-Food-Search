@@ -10,8 +10,13 @@ from.forms import healthfoodForm, SearchForm
 
 # Create your views here.
 
-
 def index(request):
+
+    return render(request, 'healthfood/landing-template.html')
+
+
+@login_required
+def landing(request):
     all_healthfood = healthfood.objects.all()
 
     if request.GET:

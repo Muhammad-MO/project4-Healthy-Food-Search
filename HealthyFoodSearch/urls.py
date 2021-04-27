@@ -21,7 +21,8 @@ import reviews.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('', healthfood.views.index, name="show_healthfood_route"),
+    path('healthfood/', healthfood.views.landing, name="show_healthfood_route"),
+    path('', healthfood.views.index, name="show_landing_route"),
     path('reviews/', reviews.views.index, name='view_reviews_route'),
     path('healthfood/create/', healthfood.views.create_healthfood),
     path('healthfood/update/<healthfood_id>',
@@ -32,7 +33,7 @@ urlpatterns = [
          reviews.views.create_reviews, name='create_reviews_route'),
     path('reviews/update/<reviews_id>', reviews.views.update_review,
          name='update_reviews_route'),
-    path('success/', healthfood.views.index, name="show_healthfood_route"),
+    path('success/', healthfood.views.landing, name="show_healthfood_route"),
     path('view/<healthfood_id>', healthfood.views.view_healthfood_details,
          name='view_healthfood_details'),
     path('reviews/delete/<reviews_id>',

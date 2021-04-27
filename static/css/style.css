@@ -239,3 +239,59 @@ input#id_date {
     width: 200px;
     border-radius: 0px;
 }
+
+label {
+    font-size: 20px;
+    color: black;
+    margin: 5px;
+}
+
+
+
+h3 {
+
+    font-family: 'Original Surfer', cursive;
+    position: relative;
+    top: 60px;
+    color: #C35817
+}
+
+h2 {
+
+    font-family: 'Original Surfer', cursive;
+    position: relative;
+    color: #C35817;
+    top: 100px;
+
+
+
+}
+
+
+h1 {
+
+    font-family: 'Original Surfer', cursive;
+    font-size: 80px;
+    position: relative;
+    color: #C88141;
+    top: 70px;
+}
+
+
+
+.img-fluid {
+
+    position: relative;
+    top: 40px;
+    margin-top: 20px;
+    border-radius: 25px;
+
+}
+
+.card {
+
+    position: relative;
+    top: 40px;
+
+
+}
