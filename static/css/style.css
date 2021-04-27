@@ -1,6 +1,6 @@
 body {
 
-    background-color: lightblue;
+    background-color: #E5C3EF;
 
 }
 
@@ -36,7 +36,7 @@ input {
     width: 110px;
     height: 32.33px;
     border-radius: 6px;
-    background-color: #157cfc;
+    background-color: white;
     color: black;
     padding: 0px, 20px, 7px;
 }
@@ -53,12 +53,13 @@ input {
     cursor: pointer;
     width: 110px;
     height: 32.33px;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 5px;
     vertical-align: middle;
     padding: 0px 20px 7px 20px;
     box-shadow: 1px 1px 1px 1px black;
     margin-left: 5px;
+    font-family: 'Original Surfer', cursive;
 }
 
 .card {
@@ -80,12 +81,13 @@ a.btn.btn-info {
     cursor: pointer;
     width: 180px;
     height: 32.33px;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 5px;
     vertical-align: middle;
     padding: 0px 20px 7px 20px;
     box-shadow: 1px 1px 1px 1px black;
     margin-left: 5px;
+    font-family: 'Original Surfer', cursive;
 }
 
 
@@ -108,6 +110,7 @@ button.btn.btn-info {
     padding: 0px 20px 7px 20px;
     box-shadow: 1px 1px 1px 1px black;
     margin-left: 5px;
+    font-family: 'Original Surfer', cursive;
 }
 
 
@@ -253,15 +256,16 @@ h3 {
     font-family: 'Original Surfer', cursive;
     position: relative;
     top: 60px;
-    color: #C35817
+    color: #5952DB;
 }
 
 h2 {
 
     font-family: 'Original Surfer', cursive;
     position: relative;
-    color: #C35817;
+    color: #5952DB;
     top: 100px;
+    font-size: 50px;
 
 
 
@@ -271,9 +275,9 @@ h2 {
 h1 {
 
     font-family: 'Original Surfer', cursive;
-    font-size: 80px;
+    font-size: 60px;
     position: relative;
-    color: #C88141;
+    color: #5952DB;
     top: 70px;
 }
 
@@ -294,4 +298,16 @@ h1 {
     top: 40px;
 
 
+}
+
+div.alert.alert-success {
+
+    background-color: #87C9FF;
+    font: #2F48DB
+}
+
+a.nav-link.active {
+
+    font-family: 'Original Surfer', cursive;
+    color: blue;
 }
