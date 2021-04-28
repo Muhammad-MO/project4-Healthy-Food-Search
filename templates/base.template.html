@@ -35,7 +35,6 @@
                     <a href="/"><img src="/static/images/healthy.jpeg" alt="food" width="50" height="40"
                             class="rounded icon"></a>
                     <li class="nav-item">
-
                         <a class="nav-link active" aria-current="page" href="/ ">Home</a>
                     </li>
 
@@ -63,12 +62,14 @@
 
 
                 <a href="/accounts/logout" class="btn btn-primary btn-sm mb-2 mt-2">Logout</a>
+
+
+
+            </div>
     </nav>
 
 
 </header>
-
-
 
 <body>
     {% if messages %}
@@ -101,6 +102,52 @@
 
 
 </body>
+
+<footer>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-5 mb-3">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+                    <a href="/"><img src="/static/images/healthy.jpeg" alt="food" width="50" height="40"
+                            class="rounded icon"></a>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/ ">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" aria-current="page" href="/healthfood/">Browse</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/reviews/create/">Create Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/reviews/">Customer Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/healthfood/create/">Add to our list</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                </ul>
+
+            </div>
+    </nav>
+
+</footer>
+
 
 
 </html>
