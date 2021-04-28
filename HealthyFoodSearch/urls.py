@@ -38,5 +38,6 @@ urlpatterns = [
          name='view_healthfood_details'),
     path('reviews/delete/<reviews_id>',
          reviews.views.delete_reviews, name='delete_reviews_route'),
+    path('cart/', include('cart.urls'))
 
 ]
