@@ -1,6 +1,6 @@
 body {
 
-    background-color: whitesmoke;
+    background-color: #E8B4B8;
 }
 
 /*Nav bar styles */
@@ -263,15 +263,15 @@ label {
 
 h3 {
 
-    font-family: 'Original Surfer', cursive;
-    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+
     top: 60px;
     color: #5952DB;
 }
 
 h2 {
 
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     position: relative;
     color: #5952DB;
     top: 100px;
@@ -284,16 +284,17 @@ h2 {
 
 h1 {
 
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 60px;
-    position: relative;
+
     color: #5952DB;
-    top: 70px;
+
+    padding: 10px;
 }
 
 h4 {
 
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 60px;
     position: relative;
     color: #5952DB;
@@ -302,7 +303,7 @@ h4 {
 
 h5 {
 
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 40px;
     position: relative;
     color: #5952DB;
@@ -311,7 +312,7 @@ h5 {
 
 h6 {
 
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
     color: blue;
     top: 50px;
@@ -345,15 +346,20 @@ div.alert.alert-success {
 
 a.nav-link.active {
 
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     color: blue;
+
 }
+
+.bg-light {
+    background-color: none;
+}
+
 
 .navbar-toggler {
     padding: .25rem .75rem;
     font-size: 1.25rem;
     line-height: 1;
-    background-color: transparent;
     border: 1px solid black;
     border-radius: .25rem;
     transition: box-shadow .15s ease-in-out;
@@ -361,6 +367,14 @@ a.nav-link.active {
 
 label.control-label {
 
-    color: whitesmoke;
-    background-color: whitesmoke;
+    color: #E8B4B8;
+
+    background-color: #E8B4B8;
+
+}
+
+label.control-label.requiredField {
+
+    color: black;
+
 }

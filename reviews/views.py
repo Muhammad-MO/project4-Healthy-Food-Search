@@ -6,7 +6,6 @@ from.forms import reviewsForm
 # Create your views here.
 
 
-@login_required
 def index(request):
     all_reviews = reviews.objects.all()
     return render(request, 'reviews/index-template.html', {

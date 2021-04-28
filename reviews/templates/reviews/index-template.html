@@ -3,32 +3,32 @@
 {% load static %}
 
 {%block content%}
-<h1>Check out what previous buyers are saying</h1>
+<h>Check out what previous buyers are saying</h1>
 
 
 
-<div style="display:flex;flex-wrap:wrap">
+    <div style="display:flex;flex-wrap:wrap">
 
-    {%for reviews in reviews %}
+        {%for reviews in reviews %}
 
-    <div class="card m-3" style="width:18rem;">
-        <div class="card-body">
+        <div class="card m-3" style="width:18rem;">
+            <div class="card-body">
 
-            <h5 class="card-title"> Name:{{reviews.name}}</h5>
-            <p class="card-title"> Description:{{reviews.reviews}}</p>
-            <p class="card-title"> Email:{{reviews.Email}}</p>
-            <p class="card-title"> Date:{{reviews.date}}</p>
-            <p class="card-title"> Healthfood:{{reviews.healthfood}}</p>
+                <h6 class="card-title"> Name:{{reviews.name}}</h6>
+                <p class="card-title"> Description:{{reviews.reviews}}</p>
+                <p class="card-title"> Email:{{reviews.Email}}</p>
+                <p class="card-title"> Date:{{reviews.date}}</p>
+                <p class="card-title"> Healthfood:{{reviews.healthfood}}</p>
+            </div>
+
+            <a href="{% url 'update_reviews_route' reviews_id=reviews.id %}"
+                class="btn btn-primary btn-sm mb-2 mt-2">Edit</a>
+
+            <a href="{% url 'delete_reviews_route' reviews_id=reviews.id %}" .
+                class="btn btn-primary btn-sm mb-2 mt-2">Delete</a>
         </div>
 
-        <a href="{% url 'update_reviews_route' reviews_id=reviews.id %}"
-            class="btn btn-primary btn-sm mb-2 mt-2">Edit</a>
+        {%endfor%}
 
-        <a href="{% url 'delete_reviews_route' reviews_id=reviews.id %}" .
-            class="btn btn-primary btn-sm mb-2 mt-2">Delete</a>
     </div>
-
-    {%endfor%}
-
-</div>
-{%endblock%}
+    {%endblock%}
