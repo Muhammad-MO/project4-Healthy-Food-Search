@@ -30,7 +30,7 @@
             <a href="{% url 'view_healthfood_details' healthfood_id=healthfood.id %}"><img class="card-img-top"
                     src="{{healthfood.image.cdn_url}}" alt="image"></a>
             <h6 class="card-title"> Name:{{healthfood.title}}</h6>
-
+            <p class="card-title"> Cost:{{healthfood.cost}}</p>
             <p class="card-title"> Producer:{{healthfood.maker}}</p>
             <p>click on image to see more information</p>
         </div>

@@ -253,6 +253,13 @@ input#id_date {
     border-radius: 0px;
 }
 
+input#id_cost {
+    border: none;
+    background-color: white;
+    width: 200px;
+    border-radius: 0px;
+}
+
 label {
     font-size: 20px;
     color: black;

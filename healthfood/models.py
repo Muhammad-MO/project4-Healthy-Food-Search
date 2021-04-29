@@ -24,6 +24,7 @@ class healthfood(models.Model):
     nutrition_carbs = models.CharField(blank=False, max_length=255)
     nutrition_protein = models.CharField(blank=False, max_length=255)
     nutrition_fats = models.CharField(blank=False, max_length=255)
+    cost = models.DecimalField(max_digits=10, decimal_places=3, blank=False)
 
     def __str__(self):
 

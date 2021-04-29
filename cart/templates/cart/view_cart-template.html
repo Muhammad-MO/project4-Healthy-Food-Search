@@ -1,0 +1,12 @@
+{% extends 'base.template.html' %}
+{%block content %}
+<h1>Your Cart</h1>
+<ul>
+    {%for key, item in cart.items %}
+    <li class="list-group=item">
+        {{item.title}}<br />
+        <p> ${{item.cost}}</p>
+    </li>
+    {%endfor%}
+</ul>
+{%endblock %}

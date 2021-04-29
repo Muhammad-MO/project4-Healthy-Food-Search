@@ -11,7 +11,7 @@ class healthfoodForm(forms.ModelForm):
         model = healthfood
         fields = ('title', 'description', 'image', 'maker',
                   'serving', 'country', 'ingredients', 'nutrition_carbs', 'nutrition_protein',
-                  'nutrition_fats')
+                  'nutrition_fats', 'cost')
 
 
 class SearchForm(forms.Form):
