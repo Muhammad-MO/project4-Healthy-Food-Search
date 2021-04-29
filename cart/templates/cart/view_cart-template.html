@@ -1,12 +1,14 @@
 {% extends 'base.template.html' %}
 {%block content %}
+
 <h1>Your Cart</h1>
-<ul>
+<ul class="list-group">
     {%for key, item in cart.items %}
     <li class="list-group=item">
-        {{item.title}}<br />
+        {{item.title}}
+        {{item.id}}<br />
         <p> ${{item.cost}}</p>
     </li>
     {%endfor%}
 </ul>
-{%endblock %}
+{%endblock%}
