@@ -4,11 +4,21 @@
 <h1>Your Cart</h1>
 <ul class="list-group">
     {%for key, item in cart.items %}
-    <li class="list-group=item">
+    <li class="list-group-item">
         {{item.title}}
-        {{item.id}}<br />
-        <p> ${{item.cost}}</p>
+
+        <p> ${{item.cost}}
+
+        </p>
+        <p>
+            quantity:{{item.qty}}
+        </p>
+
+        <a href="{% url 'remove_from_cart_route' healthfood_id=healthfood.id %}" class="btn btn-danger">Remove item</a>
     </li>
+
+
     {%endfor%}
 </ul>
+
 {%endblock%}
