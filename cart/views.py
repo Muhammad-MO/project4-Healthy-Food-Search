@@ -26,9 +26,11 @@ def add_to_cart(request, healthfood_id):
 
             'title': healthfoods.title,
             'cost': float(healthfoods.cost),
-            'qty': 1
-        }
+            'qty': 1,
+            'id': healthfood_id
 
+
+        }
     # save the cart back to sessions
     request.session['shopping_cart'] = cart
 
@@ -47,18 +49,17 @@ def views_cart(request):
 
 def remove_from_cart(request, healthfood_id):
     cart = request.session.get('shopping_cart', {})
-
     if healthfood_id in cart:
         del cart[healthfood_id]
+    request.session['shopping_cart'] = cart
+    messages.success(request, "Item removed from cart!")
+    return redirect(reverse('show_healthfood_route'))
+
+
+def update_quantity(request, healthfood_id):
+    cart = request.session.get('shopping_cart', {})
+    if healthfood_id in cart:
+        cart[healthfood_id]['qty'] = request.POST['qty']
         request.session['shopping_cart'] = cart
-        messages.success(request, "Item removed from cart!")
+        messages.success(request, 'The quantity for the item has changed')
         return redirect(reverse('views_cart'))
-
-
-# def update_quantity(request, healthfood_id):
-    # cart = request.session.get('shopping_cart')
-    # if healthfood_id in cart:
-      #  cart[healthfood_id]['qty'] = request.POST['qty']
-      #  request.session['shopping_cart'] = cart
-      # 3 messages.success(request, 'The quantity for the item has changed')
-    # return redirect(reverse('views_cart'))
