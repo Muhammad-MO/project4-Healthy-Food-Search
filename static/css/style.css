@@ -385,3 +385,11 @@ label.control-label.requiredField {
     color: black;
 
 }
+
+/* cart button styles */
+
+input.btn.btn-light.btn-sm {
+
+    background-color: white;
+    width: 50px;
+}

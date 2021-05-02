@@ -1,20 +1,31 @@
 {%extends 'base.template.html'%}
 {% load static %}
 {%block content %}
-{%for key, item in cart.items %}
-<div class="card m-3">
-    <div class="card-title m-3">{{item.title}}</div>
-    <div class="card-body m-3">
 
-        <p>
-            Quantity:{{item.qty}}<br />
-            Cost: ${{item.cost}}<br />
-            total cost:${{item.total_cost}}
+<div style="display:flex;flex-wrap:wrap">
+    {%for key, item in cart.items %}
+    <div class="card m-3">
+        <div class="card-title m-3">{{item.title}}</div>
+        <div class="card-body m-3">
 
-        </p>
-        <a href="{% url 'remove_from_cart' healthfood_id=item.id %}" class="btn btn-danger">Remove item</a>
+            <form method="POST" action="{% url 'update_cart' healthfood_id=item.id %}">
+                {%csrf_token%}
+                Quantity:<input name="qty" type="text" value="{{item.qty}}"
+                    style="width:40px; background-color:white;margin-left:5px;">
+
+                <input type="submit" value="Update Quantity" style="width:150px" />
+            </form>
+
+            <p>
+                Quantity:{{item.qty}}<br />
+                Cost: ${{item.cost}}<br />
+                total cost:${{item.total_cost}}
+
+            </p>
+            <a href="{% url 'remove_from_cart' healthfood_id=item.id %}" class="btn btn-danger">Remove item</a>
+        </div>
+
     </div>
-
 </div>
 {%endfor%}
 {%endblock%}

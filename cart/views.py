@@ -23,12 +23,11 @@ def add_to_cart(request, healthfood_id):
     else:
 
         cart[healthfood_id] = {
-
+            'id': healthfood_id,
             'title': healthfoods.title,
             'cost': float(healthfoods.cost),
-            'qty': 1,
-            'id': healthfood_id
-
+            'total_cost': float(healthfoods.cost),
+            'qty': 1
 
         }
     # save the cart back to sessions
@@ -60,6 +59,8 @@ def update_quantity(request, healthfood_id):
     cart = request.session.get('shopping_cart', {})
     if healthfood_id in cart:
         cart[healthfood_id]['qty'] = request.POST['qty']
+        cart[healthfood_id]['total_cost'] = float(
+            cart[healthfood_id]['cost']) * int(request.POST['qty'])
         request.session['shopping_cart'] = cart
         messages.success(request, 'The quantity for the item has changed')
         return redirect(reverse('views_cart'))
