@@ -27,7 +27,7 @@ def add_to_cart(request, healthfood_id):
             'title': healthfoods.title,
             'cost': float(healthfoods.cost),
             'total_cost': float(healthfoods.cost),
-            'qty': 1
+
 
         }
     # save the cart back to sessions

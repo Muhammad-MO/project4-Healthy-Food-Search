@@ -34,7 +34,8 @@
             <p class="card-title"> Producer:{{healthfood.maker}}</p>
             <p>click on image to see more information</p>
         </div>
-        <a href="{% url 'add_to_cart' healthfood_id=healthfood.id %}">Add to Cart</a>
+        <a href="{% url 'add_to_cart' healthfood_id=healthfood.id %}" class="m-3"><img src="/static/images/cart.png"
+                alt="food" width="30" height="30" class="rounded icon">Add to Cart</a>
     </div>
 
 
