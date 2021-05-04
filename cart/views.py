@@ -1,7 +1,6 @@
-from django.shortcuts import render,  get_object_or_404, redirect, reverse
-from django.contrib import messages
-
 from healthfood.models import healthfood
+from django.contrib import messages
+from django.shortcuts import render,  get_object_or_404, redirect, reverse
 
 
 # Create your views here.
@@ -27,6 +26,8 @@ def add_to_cart(request, healthfood_id):
             'title': healthfoods.title,
             'cost': float(healthfoods.cost),
             'total_cost': float(healthfoods.cost),
+            'qty': 1
+
 
 
         }

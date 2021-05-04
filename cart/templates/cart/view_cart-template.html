@@ -2,9 +2,9 @@
 {% load static %}
 {%block content %}
 
-
 <div style="display:flex;flex-wrap:wrap">
 
+    <a href="{% url 'checkout' %}" class="btn btn-success m-3">Checkout</a>
 
 
     <table class="table table-bordered">
@@ -26,7 +26,6 @@
         <tbody>
 
             <tr>
-
                 <td>{{item.id}}</td>
                 <td>{{item.title}}</td>
                 <td>{{item.qty}}</td>
