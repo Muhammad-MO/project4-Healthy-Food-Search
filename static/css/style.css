@@ -58,13 +58,15 @@ input {
     padding: 0px 20px 7px 20px;
     box-shadow: 1px 1px 1px 1px black;
     margin-left: 5px;
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .card {
 
     border-radius: 15px;
     width: 500px;
+    background-color: #E8B4B8;
+    border: none;
 
 }
 
@@ -86,7 +88,7 @@ a.btn.btn-info {
     padding: 0px 20px 7px 20px;
     box-shadow: 1px 1px 1px 1px black;
     margin-left: 5px;
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 
@@ -109,7 +111,7 @@ button.btn.btn-info {
     padding: 0px 20px 7px 20px;
     box-shadow: 1px 1px 1px 1px black;
     margin-left: 5px;
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 
@@ -341,6 +343,7 @@ h6 {
 
     position: relative;
     top: 40px;
+    background-color: ;
 
 
 }
