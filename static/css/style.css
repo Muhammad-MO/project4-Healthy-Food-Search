@@ -1,6 +1,10 @@
 body {
 
-    background-color: #E8B4B8;
+    background-image: url(/static/images/fruitbowl.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
 }
 
 /*Nav bar styles */
@@ -40,7 +44,7 @@ input {
     padding: 0px, 20px, 7px;
 }
 
-
+/*button sytles */
 .btn-primary {
     text-decoration: none;
     color: black;
@@ -65,8 +69,9 @@ input {
 
     border-radius: 15px;
     width: 500px;
-    background-color: #E8B4B8;
+    background-color: white;
     border: none;
+
 
 }
 
@@ -114,6 +119,7 @@ button.btn.btn-info {
     font-family: 'Josefin Sans', sans-serif;
 }
 
+/* iput form area styles */
 
 input#id_title.textinput.textinput {
     background-color: white;
@@ -268,14 +274,14 @@ label {
     margin: 5px;
 }
 
-
+/* header styles*/
 
 h3 {
 
     font-family: 'Josefin Sans', sans-serif;
 
     top: 60px;
-    color: #5952DB;
+    color: black;
 }
 
 h2 {
@@ -306,7 +312,7 @@ h4 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 60px;
     position: relative;
-    color: #5952DB;
+    color: black;
     top: 50px;
 }
 
@@ -343,16 +349,19 @@ h6 {
 
     position: relative;
     top: 40px;
-    background-color: ;
+
 
 
 }
 
+/* flash message style */
 div.alert.alert-success {
 
     background-color: #87C9FF;
     font: #2F48DB
 }
+
+/*navigation link styles*/
 
 a.nav-link.active {
 
@@ -360,11 +369,6 @@ a.nav-link.active {
     color: blue;
 
 }
-
-.bg-light {
-    background-color: none;
-}
-
 
 .navbar-toggler {
     padding: .25rem .75rem;
