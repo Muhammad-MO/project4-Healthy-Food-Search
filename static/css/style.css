@@ -69,8 +69,9 @@ input {
 
     border-radius: 15px;
     width: 500px;
-    background-color: white;
+    background-color: lightgrey;
     border: none;
+    opacity: 0.9;
 
 
 }
@@ -279,7 +280,6 @@ label {
 h3 {
 
     font-family: 'Josefin Sans', sans-serif;
-
     top: 60px;
     color: black;
 }
@@ -301,9 +301,9 @@ h1 {
 
     font-family: 'Josefin Sans', sans-serif;
     font-size: 60px;
-
-    color: #5952DB;
-
+    position: relative;
+    left: 10px;
+    color: black;
     padding: 10px;
 }
 
@@ -321,7 +321,7 @@ h5 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 40px;
     position: relative;
-    color: #5952DB;
+    color: black;
     top: 50px;
 }
 
@@ -381,9 +381,8 @@ a.nav-link.active {
 
 label.control-label {
 
-    color: #E8B4B8;
-
-    background-color: #E8B4B8;
+    background-color: transparent;
+    color: transparent;
 
 }
 
@@ -399,4 +398,9 @@ input.btn.btn-light.btn-sm {
 
     background-color: white;
     width: 50px;
+}
+
+a {
+    font-size: 16px;
+    color: black
 }

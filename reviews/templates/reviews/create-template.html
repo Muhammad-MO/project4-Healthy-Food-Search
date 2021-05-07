@@ -9,12 +9,18 @@
 
 
 {%block content%}
+<div style="display:flex;flex-wrap:wrap">
+    <div class="card m-3" style="width:36rem;opacity:0.9">
+        <div class="card-body">
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form|crispy}}
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy}}
 
-    <input type="Submit" />
-</form>
+                <input type="Submit" />
+            </form>
 
+        </div>
+    </div>
+</div>
 {%endblock%}

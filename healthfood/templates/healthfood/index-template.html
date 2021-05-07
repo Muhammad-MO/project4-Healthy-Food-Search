@@ -6,7 +6,6 @@
 {%block content%}
 
 {% if request.user.is_authenticated  %}
-<h5 class="m-3">Welcome {{request.user}}</h5>
 {% else %}
 <a href="/accounts/login" class="btn btn-primary btn-sm mb-2 mt-2" style="position:absolute; right:10px;">Login</a>
 {%endif%}
