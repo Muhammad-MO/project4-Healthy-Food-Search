@@ -1,0 +1,26 @@
+{% extends 'base.template.html' %}
+
+{% load static %}
+
+
+{%block head%}
+{{ form.media }}
+{%endblock%}
+
+
+{%block content%}
+<div style="display:flex;flex-wrap:wrap">
+    <div class="card m-3" style="width:36rem;opacity:0.9">
+        <div class="card-body">
+
+            <form method="POST">
+                {% csrf_token %}
+
+                {{ form.as_p}}
+                <input type="Submit" />
+            </form>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
