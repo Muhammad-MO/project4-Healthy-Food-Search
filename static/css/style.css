@@ -36,7 +36,7 @@ label {
 /* submit button styles */
 
 input {
-    width: 110px;
+    width: 140px;
     height: 32.33px;
     border-radius: 6px;
     background-color: #f0e2e1;
@@ -71,6 +71,7 @@ input {
     background-color: lightgrey;
     border: none;
     opacity: 0.9;
+    position: -webkit-sticky;
 
 
 }
@@ -219,6 +220,15 @@ input#id_username {
     border-radius: 0px;
 }
 
+input#id_password {
+
+    border: none;
+    background-color: white;
+    width: 200px;
+    border-radius: 0px;
+
+}
+
 input#id_password1 {
 
     border: none;
@@ -326,7 +336,7 @@ h6 {
 
     font-family: 'Josefin Sans', sans-serif;
     font-size: 20px;
-    color: blue;
+    color: black;
     top: 50px;
 }
 
@@ -391,7 +401,7 @@ label.control-label.requiredField {
 
 /* cart button styles */
 
-input.btn.btn-light.btn-sm {
+.btn.btn-light.btn-sm {
 
     background-color: white;
     width: 50px;

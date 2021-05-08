@@ -8,46 +8,55 @@
 {% block content %}
 
 
+<div style="display:flex;flex-wrap:wrap">
 
 
-{% get_providers as socialaccount_providers %}
+    <div class="card m-3" style="width:36rem; height:30rem;">
+        <div class="card-body">
 
-{% if socialaccount_providers %}
-<p>{% blocktrans with site.name as site_name %}Please sign in with one
-    of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-    for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
+            {% get_providers as socialaccount_providers %}
 
-<div class="socialaccount_ballot">
+            {% if socialaccount_providers %}
+            <p>{% blocktrans with site.name as site_name %}Please sign in with one
+                of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+                for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
-    <ul class="socialaccount_providers">
-        {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-    </ul>
+            <div class="socialaccount_ballot">
 
-    <div class="login-or">{% trans 'or' %}</div>
+                <ul class="socialaccount_providers">
+                    {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+                </ul>
 
+                <div class="login-or">{% trans 'or' %}</div>
+
+            </div>
+
+            {% include "socialaccount/snippets/login_extra.html" %}
+
+            {% else %}
+            <h3>{% blocktrans %}If you have not created an account yet, then please
+                <a class="btn btn-secondary btn-sm mb-2 mt-2" href="{{ signup_url }}">sign up</a>
+                first.{% endblocktrans %}
+            </h3>
+            {% endif %}
+
+
+
+
+            <form class="login" method="POST" action="{% url 'account_login' %}">
+
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <a class="btn btn-secondary mb-2 mt-2" style="width:200px;"
+                    href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                <button class="btn btn-secondary btn-sm mb-2 mt-2" type="submit">{% trans "Sign In" %}</button>
+            </form>
+
+        </div>
+    </div>
 </div>
-
-{% include "socialaccount/snippets/login_extra.html" %}
-
-{% else %}
-<h6>{% blocktrans %}If you have not created an account yet, then please
-    <a class="btn btn-info btn-sm mb-2 mt-2" href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</h6>
-{% endif %}
-
-
-
-
-<form class="login" method="POST" action="{% url 'account_login' %}">
-
-    {% csrf_token %}
-    {{ form.as_p }}
-    {% if redirect_field_value %}
-    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-    {% endif %}
-    <a class="btn btn-info mb-2 mt-2" style="width:200px;"
-        href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-    <button class="btn btn-primary btn-sm mb-2 mt-2" type="submit">{% trans "Sign In" %}</button>
-</form>
-
 
 {% endblock %}
