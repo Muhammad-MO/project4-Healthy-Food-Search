@@ -7,7 +7,7 @@ from healthfood.models import healthfood
 from checkout.models import Purchase
 from django.contrib.sites.models import Site
 from django.contrib.auth.models import User
-endpoint_secret = "whsec_mWWUaOtXp9fO8Cq6wxNGZoFxXhX1me0b"
+endpoint_secret = "whsec_IKRTvZ5zHm7J2miRl9GOYdJsGB5NxZQg"
 
 
 def checkout(request):
@@ -63,13 +63,12 @@ def checkout(request):
         # mode="payment",
         mode="payment",
         # success_url=domain + reverse("checkout_success"),
-        success_url=domain + reverse("checkout_success"),
+        success_url=settings.STRIPE_SUCCESS_URL,
         # cancel_url=domain + reverse("checkout_cancelled")
-        cancel_url=domain + reverse("checkout_cancelled")
+        cancel_url=settings.STRIPE_CANCEL_URL
 
     )
 
-    # return render(request, 'checkout/checkout-template.html', {
     return render(request, 'checkout/checkout-template.html', {
 
         # 'session_id': session.id,
@@ -108,15 +107,15 @@ def payment_completed(request):
 
 
 def checkout_success(request):
-    return render(request, 'healthfood/landing-template.html', {
-
+    # Empty the shopping cart
+    request.session['shopping_cart'] = {}
+    return render(request, 'checkout/checkout_success-template.html', {
 
     })
 
 
 def checkout_cancelled(request):
-    return render(request, 'healthfood/landing-template.html', {
-
+    return render(request, 'checkout/checkout_cancelled-template.html', {
 
     })
 
