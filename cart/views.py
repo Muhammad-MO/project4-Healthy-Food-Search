@@ -15,9 +15,11 @@ def add_to_cart(request, healthfood_id):
     # healthfood is found, let's add it to the cart
 
     if healthfood_id in cart:
-        cart[healthfood_id]['qty'] += 1
+
         cart[healthfood_id]['total_cost'] = int(
             cart[healthfood_id]['qty']) * float(cart[healthfood_id]['cost'])
+
+        messages.success(request, "item in cart already")
 
     else:
 
