@@ -18,7 +18,6 @@ def index(request):
     })
 
 
-@ login_required
 def landing(request):
     all_healthfood = healthfood.objects.all()
 
@@ -45,7 +44,6 @@ def landing(request):
     })
 
 
-@ login_required
 def create_healthfood(request):
     if request.method == 'POST':
         create_form = healthfoodForm(request.POST)
