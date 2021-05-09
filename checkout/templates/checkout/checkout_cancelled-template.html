@@ -2,6 +2,16 @@
 
 {% block content %}
 
-<h1> Purchase cancelled</h1>
+<div style="display:flex;flex-wrap:wrap">
+    <div class="card m-3" style="width:72rem;height:20rem;">
+        <div class="card-body">
+            <h1> {{request.user}}, you cancelled your purchase</h1>
+            <h1>Click on the button to continue shopping
+                <a href="{% url 'show_healthfood_route' %}" class="btn btn-secondary btn-l mb-2 mt-2">Continue</a>
+            </h1>
 
+
+        </div>
+    </div>
+</div>
 {%endblock%}

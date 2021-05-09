@@ -289,13 +289,16 @@ h3 {
     font-family: 'Josefin Sans', sans-serif;
     top: 60px;
     color: black;
+    position: relative;
+    left: 10px;
+    padding: 10px;
 }
 
 h2 {
 
     font-family: 'Josefin Sans', sans-serif;
     position: relative;
-    color: #5952DB;
+    color: black;
     top: 100px;
     font-size: 50px;
 
