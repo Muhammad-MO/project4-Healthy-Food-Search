@@ -9,10 +9,9 @@
 
 
 <div style="display:flex;flex-wrap:wrap">
-
-
     <div class="card m-3" style="width:36rem; height:30rem;">
         <div class="card-body">
+            <!--
 
             {% get_providers as socialaccount_providers %}
 
@@ -33,26 +32,22 @@
 
             {% include "socialaccount/snippets/login_extra.html" %}
 
-            {% else %}
-            <h3>{% blocktrans %}If you have not created an account yet, then please
-                <a class="btn btn-secondary btn-sm mb-2 mt-2" href="{{ signup_url }}">sign up</a>
-                first.{% endblocktrans %}
-            </h3>
-            {% endif %}
+            {% else %}-->
+            <h3>If you have not created an account yet, then please
+                <a class="btn btn-secondary btn-sm mb-2 mt-2" href="{{ signup_url }}">sign up</a></h3></br></br>
 
+            <!--  {% endif %}-->
 
-
-
-            <form class="login" method="POST" action="{% url 'account_login' %}">
+            <form class="login" method="POST" action="{% url 'account_login' ">
 
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-                <a class="btn btn-secondary mb-2 mt-2" style="width:200px;"
-                    href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-                <button class="btn btn-secondary btn-sm mb-2 mt-2" type="submit">{% trans "Sign In" %}</button>
+                <input type=" hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <a class="btn btn-secondary mb-2 mt-2" style="width:200px;"
+                href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+            <button class="btn btn-secondary btn-sm mb-2 mt-2" type="submit">Sign In</button>
             </form>
 
         </div>
