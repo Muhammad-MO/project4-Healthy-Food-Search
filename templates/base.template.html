@@ -32,7 +32,9 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                    <a href="/"><img src="/static/images/healthy.jpeg" alt="food" width="50" height="40"
+
+
+                    <a href="/"><img src="{% static 'images/healthy.jpeg' %}" alt="food" width="50" height="40"
                             class="rounded icon"></a>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/ ">Home</a>
@@ -58,14 +60,8 @@
                     </li>
                 </ul>
 
-                <a href="{% url 'views_cart' %}"><img src="/static/images/cart.png" alt="food" width="30" height="30"
-                        class="rounded icon">Shopping Cart ({{number_of_items}})</a>
-
-
-
-
-
-
+                <a href="{% url 'views_cart' %}"><img src="{% static 'images/cart.png' %}" alt="food" width="30"
+                        height="30" class="rounded icon">Shopping Cart ({{number_of_items}})</a>
 
 
             </div>
@@ -108,7 +104,7 @@
 
 
 
-                    <a href="/"><img src="/static/images/healthy2.jpeg" alt="food" width="50" height="40"
+                    <a href="/"><img src="{% static 'images/healthy.jpeg' %}" alt="food" width="50" height="40"
                             class="rounded icon"></a>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/ ">Home</a>
