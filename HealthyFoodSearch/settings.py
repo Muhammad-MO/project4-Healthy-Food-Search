@@ -130,7 +130,7 @@ WSGI_APPLICATION = 'HealthyFoodSearch.wsgi.application'
 # }
 # }
 
-DATABASES =  {
+DATABASES = {
 
     'default': dj_database_url.parse(os.environt.get("DATABASES_URL"))
 }
