@@ -6,8 +6,9 @@
 {%block content%}
 
 {% if request.user.is_authenticated  %}
+
 {% else %}
-<a href="/accounts/login" class="btn btn-primary btn-sm mb-2 mt-2" style="position:absolute; right:10px;">Login</a>
+
 {%endif%}
 
 
@@ -26,7 +27,7 @@
 
     <div class="card m-3" style="width:18rem;">
         <div class="card-body">
-            <a href="{% url 'view_healthfood_details' healthfood_id=healthfood.id %}"><img class="card-img-top"
+            <a href="{% url 'view_healthfood_details' healthfood_id=healthfood.id %}"><img class="card-img-top mb-3"
                     src="{{healthfood.image.cdn_url}}" alt="image"></a>
             <h6 class="card-title"> Name:{{healthfood.title}}</h6>
             <p class="card-title"> Cost:${{healthfood.cost}}</p>

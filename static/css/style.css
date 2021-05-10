@@ -3,9 +3,8 @@ body {
     background-image: url(/static/images/fruitbowl.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-
-
 }
+
 
 /*Nav bar styles */
 nav ul a {

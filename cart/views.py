@@ -1,6 +1,7 @@
 from healthfood.models import healthfood
 from django.contrib import messages
 from django.shortcuts import render,  get_object_or_404, redirect, reverse
+import json
 
 
 # Create your views here.
@@ -31,8 +32,8 @@ def add_to_cart(request, healthfood_id):
             'qty': 1
 
 
-
         }
+
     # save the cart back to sessions
     request.session['shopping_cart'] = cart
 
