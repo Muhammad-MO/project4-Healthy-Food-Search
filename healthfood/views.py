@@ -20,13 +20,14 @@ def index(request):
 
 @login_required
 def landing(request):
+
     all_healthfood = healthfood.objects.all()
 
     if request.GET:
         # always true query:
         queries = ~Q(pk__in=[])
 
-        # if a title is specified, add it to the query
+    # if a title is specified, add it to the query
         if 'title' in request.GET and request.GET['title']:
             title = request.GET['title']
             queries = queries & Q(title__icontains=title)
@@ -109,8 +110,16 @@ def delete_healthfood(request, healthfood_id):
 
 @login_required
 def view_healthfood_details(request, healthfood_id):
-    healthfood_details = get_object_or_404(healthfood, pk=healthfood_id)
-    return render(request, 'healthfood/details-template.html', {
-        'healthfood': healthfood_details,
+    if request.user.is_superuser:
+        healthfood_details = get_object_or_404(healthfood, pk=healthfood_id)
+        return render(request, 'healthfood/details-template.html', {
+            'healthfood': healthfood_details
 
-    })
+        })
+
+    else:
+        healthfood_details = get_object_or_404(healthfood, pk=healthfood_id)
+        return render(request, 'healthfood/details2-template.html', {
+            'healthfood': healthfood_details
+
+        })

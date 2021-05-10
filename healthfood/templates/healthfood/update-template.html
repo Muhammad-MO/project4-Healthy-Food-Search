@@ -10,11 +10,19 @@
 
 {%block content%}
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p}}
+<div style="display:flex;flex-wrap:wrap">
+    <div class="card m-3" style="width:25rem;">
+        <div class="card-body">
 
-    <input type="Submit" />
-</form>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p}}
+
+                <input type="Submit" />
+            </form>
+
+        </div>
+    </div>
+</div>
 
 {%endblock%}

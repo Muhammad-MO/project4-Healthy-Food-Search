@@ -4,17 +4,25 @@
 
 {%block content%}
 
+<div style="display:flex;flex-wrap:wrap">
 
-<h1>Delete {{healthfood.title}}</h1>
-<div class="card-body">
-    <img src="{{healthfood.image.cdn_url}}" width="200" height="200" alt="image">
+    <div class="card m-3" style="width:18rem;">
+        <div class="card-body">
+
+            <h3 class="mb-4">Delete {{healthfood.title}}</h3>
+
+            <img src="{{healthfood.image.cdn_url}}" width="200" height="200" class="mt-4" alt="image">
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            <input type="submit" value="Yes" class="btn btn-secondary btn-sm m-4" />
+            <a href="{% url 'show_healthfood_route' %}" class="btn btn-secondary btn-sm mb-2 mt-2">No</a>
+        </form>.
+
+    </div>
 </div>
-<h4>Are you sure?</h4>
-<form method="POST">
-    {% csrf_token %}
-    <input type="submit" value="Yes" class="btn btn-primary btn-sm mb-2 mt-2" />
-    <a href="{% url 'show_healthfood_route' %}" class="btn btn-primary btn-sm mb-2 mt-2">No</a>
-</form>
+</div>
 
 
 

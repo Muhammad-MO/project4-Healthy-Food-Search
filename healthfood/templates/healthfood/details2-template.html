@@ -31,12 +31,8 @@
                 Ingredients:{{healthfood.ingredients}}
             </p>
         </div>
-        {% if request.user.is_superuser%}
-        <a class="btn btn-secondary btn-sm mb-2 mt-2"
-            href="{% url 'update_healthfood_route' healthfood_id=healthfood.id %}">Edit</a>
-        <a class="btn btn-secondary btn-sm mb-2 mt-2"
-            href="{% url 'delete_healthfood_route' healthfood_id=healthfood.id %}">Delete</a>
-        {% endif %}
+
+
     </div>
 
 
