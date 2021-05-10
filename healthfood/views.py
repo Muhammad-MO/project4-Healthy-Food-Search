@@ -18,6 +18,7 @@ def index(request):
     })
 
 
+@login_required
 def landing(request):
     all_healthfood = healthfood.objects.all()
 
@@ -44,6 +45,7 @@ def landing(request):
     })
 
 
+@login_required
 def create_healthfood(request):
     if request.method == 'POST':
         create_form = healthfoodForm(request.POST)
@@ -67,7 +69,7 @@ def create_healthfood(request):
         })
 
 
-@ login_required
+@login_required
 def update_healthfood(request, healthfood_id):
     healthfood_being_updated = get_object_or_404(healthfood, pk=healthfood_id)
     if request.method == "POST":
