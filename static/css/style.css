@@ -1,6 +1,6 @@
 body {
 
-    background-image: url(/static/images/fruitbowl.jpg);
+    background-image: url(/static/images/fruitbowl2.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -53,7 +53,7 @@ input {
     -webkit-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;
     cursor: pointer;
-    width: 110px;
+    width: 120px;
     height: 32.33px;
     font-size: 16px;
     border-radius: 5px;
@@ -70,10 +70,10 @@ input {
     background-color: lightgrey;
     border: none;
     opacity: 0.9;
-    position: -webkit-sticky;
 
 
 }
+
 
 a.btn.btn-info {
 
