@@ -1,26 +1,38 @@
 {% extends 'base.template.html' %}
-{% load static %uy}
+{% load static %}
 {% load crispy_forms_tags %}
 
 
 
 {%block content%}
-<a href="/accounts/login" class="btn btn-secondary m-3">Login</a>
+
+
+<div style="display:flex;flex-wrap:wrap">
+
+
+    <div class="card m-3" style="width:72rem; height:35rem; opacity:0.7">
+        <div class="card-body">
+            <h1>About us</h1>
+            <h5>A leading grocery retailer providing healthy food to fit your dietary needs</h5>
+
+            <h5><a href="/accounts/login" class="btn btn-danger m-3">Login</a> to browse through our catalogue</h5>
+
+        </div>
+
+    </div>
+</div>
 
 
 
 
 
 <div style="display:flex;flex-wrap:wrap">
-
-
-    <div class="card m-3" style="width:72rem; height:30rem; opacity:0.7">
+    <div class="card ml-3 mr-3 mb-3" style="width:72rem; height:30rem; opacity:0.7">
         <div class="card-body">
-            <h1>About us</h1>
-            <h3>A leading grocery retailer providing healthy food to fit your dietary needs</h3></br>
+
             <h1 class="mt-4">Our Promise to you</h1>
-            <h3>To provide with you with the freshest wholesome food at a
-                reasonable price</h3>
+            <h5>To provide with you with the freshest wholesome food at a
+                reasonable price</h5>
 
 
         </div>

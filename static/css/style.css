@@ -40,7 +40,7 @@ input {
     border-radius: 6px;
     background-color: #f0e2e1;
     color: black;
-    padding: 0px, 20px, 7px;
+    padding: 0px 20px 7px;
 }
 
 /*button sytles */
@@ -367,7 +367,7 @@ h6 {
 div.alert.alert-success {
 
     background-color: #87C9FF;
-    font: #2F48DB
+    color: #2F48DB;
 }
 
 /*navigation link styles*/
