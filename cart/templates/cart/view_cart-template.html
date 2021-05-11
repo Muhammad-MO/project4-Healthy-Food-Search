@@ -16,7 +16,7 @@
             <h3 class="card-title">{{item.title}}</h3></br></br>
             <p class="card-title">Quantity:{{item.qty}}</p>
             <p class="card-title">Cost:${{item.cost}}</p>
-            <p class="card-title">Total Cosst: ${{item.total_cost}} </p>
+            <p class="card-title">Total Cost: ${{item.total_cost}} </p>
 
 
             <form method="POST" action="{% url 'update_cart' healthfood_id=item.id%}" class="mb-3">
@@ -24,7 +24,7 @@
                 Quantity:<input name="qty" type="text" value="{{item.qty}}" style="width:40px; background-color:white;"
                     class="mb-3">
 
-                <input type="submit" value="Update Quantity" style="width:150px" />
+                <input type="submit" value="Update Quantity" style="width:150px">
             </form>
 
             <a href="{% url 'remove_from_cart' healthfood_id=item.id %}" class="btn btn-danger">Remove item</a>

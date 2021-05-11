@@ -1,7 +1,6 @@
 from healthfood.models import healthfood
 from django.contrib import messages
 from django.shortcuts import render,  get_object_or_404, redirect, reverse
-import json
 
 
 # Create your views here.
@@ -60,7 +59,7 @@ def remove_from_cart(request, healthfood_id):
 
 
 def update_quantity(request, healthfood_id):
-    cart = request.session.get('shopping_cart', {})
+    cart = request.session.get('shopping_cart')
     if healthfood_id in cart:
         cart[healthfood_id]['qty'] = request.POST['qty']
         cart[healthfood_id]['total_cost'] = float(
