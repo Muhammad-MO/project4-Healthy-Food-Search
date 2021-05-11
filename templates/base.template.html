@@ -1,6 +1,6 @@
 {% load static %}
 {% load crispy_forms_tags %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,9 +16,12 @@
 
     <link rel="stylesheet" href="{% static '/css/style.css' %}" />
 
-    <title>Healthy Food Search</title>
+
 
     {%block head%}{%endblock%}
+
+    <title>{%block title%}Healthy Food Search{%endblock%}</title>
+
 
 </head>
 <header>
@@ -74,6 +77,9 @@
 
 <body>
 
+    <a href="/admin" class="btn btn-secondary btn-sm m-3"> Admin</a>
+    <a href="/accounts/logout" class="btn btn-secondary btn-sm m-3">Logout</a>
+
 
     {% if messages %}
     <div class="alert alert-success">
@@ -90,54 +96,12 @@
 
 
 
+
 </body>
 
-<footer>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-5 mb-3">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 
 
-                    <a href="/"><img src="{% static 'images/healthy.jpeg' %}" alt="food" width="50" height="40"
-                            class="rounded icon"></a>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/ ">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a class="nav-link active" aria-current="page" href="/healthfood/">Browse</a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/reviews/create/">Create Feedback</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/reviews/">Customer Reviews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/healthfood/create/">Add to our list</a>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                </ul>
-
-            </div>
-    </nav>
-    <a href="/admin" class="btn btn-secondary btn-sm mb-2 mt-2"> Admin</a>
-    <a href="/accounts/logout" class="btn btn-secondary m-3">Logout</a>
-
-</footer>
 
 <!--Script Tags-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
