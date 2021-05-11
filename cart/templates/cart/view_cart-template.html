@@ -20,7 +20,7 @@
 
 
             <form method="POST" action="{% url 'update_cart' healthfood_id=item.id%}" class="mb-3">
-                {%csrf_token%}
+                {% csrf_token %}
                 Quantity:<input name="qty" type="text" value="{{item.qty}}" style="width:40px; background-color:white;"
                     class="mb-3">
 
