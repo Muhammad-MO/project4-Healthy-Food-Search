@@ -1,6 +1,9 @@
 body {
 
-    background-color: #cab1ac;
+    background-image: url(/static/images/fruitbowl.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 
@@ -369,7 +372,6 @@ div.alert.alert-success {
 }
 
 /*navigation link styles*/
-
 
 a.nav-link.active {
 

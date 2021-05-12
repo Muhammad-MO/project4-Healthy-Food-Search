@@ -1,45 +1,74 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# About this site.
 
-Welcome Muhammad-MO,
+We were presented with a task to reflect what we have learned about Python and Django and enabling CRUD functions.
+I took the opportunity to create a E-comerce websie where users can purchase healthy food items
+The website is programmed with the ability to allow a consumer/user to search for their favourite healthfood , add it to the cart and purchase. The consumer 
+can also create reviews, delete reviews and see other reviews.
+There is also a function where an admin can log in and perform CRUD on the products either in the backend or from the frontend. Ths feature is only available to Admin or SuperUSer
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+![picture](/static/images/screenshot.png)
 
-## Gitpod Reminders
+# Demo 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+A demo of the page can be seen [here](https://healthfoodmart.herokuapp.com/) on this link.
 
-`python3 -m http.server`
+# Programmig Languages used
+1. HTML
+2. CSS
+3. Python
+4. Javascript
 
-A blue button should appear to click: _Make Public_,
+# Features
 
-Another blue button should appear to click: _Open Browser_.
+The overall website's look is achieved as planned. Users are able to search and purchase their favourite healthfood , add to cart, purchase via a credit card, create reviews and leave reviews.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The admin / superuser is able to update, delete, create new food
+items leave a feedback and perform the same functions the user does.
 
-A blue button should appear to click: _Make Public_,
+# Features left to implement
 
-Another blue button should appear to click: _Open Browser_.
+The future plans for this website is to add discount and coupon popues for the past consumers
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+There are also plans to increase the Emart database and make the site searchable by producer and price
+# Deployment
 
-## Updates Since The Instructional Video
+The website was deployed on Heroku and can be seen [here](https://healthfoodmart.herokuapp.com/)
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# Content
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+All content was authored by me and referenced from pages which are mentioned in the Credit Section
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+# Media
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Pictures for the home page were taken from
+1. https://www.healthline.com
+2. https://www.Bicycling.com/
+3. https://www.healthyeating.org
+4. https://www.livescience.com/
+5. https://www.jessicagavin.com/
+6. https://www.culinaryhill.com
+7. https://www.cleaneatingkitchen.com/
+8. https://www.verywellfit.com/
+9. https://www.pexels.com/
+10. https://solidstarts.com/
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+# Credit
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+References,Javascript and bootstrap codes were used from the following websites
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+1. https://www.stackoverflow.com
+2. https://www.w3schools.com
+3. https://www.w3.org/
+4. https://getbootstrap.com/
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+# Testing
 
----
-
-Happy coding!
+| Item Tested         | Result            |   Remarks                       |
+| --------------------|:-----------------:|:------------------------------- |
+| Navbar-dropdown     | Works as intended | transforms into burger dropdown |  
+| Log-in button       | Works as intended | bring user to login page        |   | Search Field        | Works as intended | User can search for their item  |   | Image.              | Works as intended | Let user see details of food    |   | Add to Cart         | Works as intended | Users can add items to cart.    |   
+| Update Quantity     | Works as intended | Users can increase qty in cart. |   
+| Total Cost.         | Works as intended | The total cost is calcuated.    | 
+| Checkout.           | Works as intended | Users can pay for the item.     |   
+ 
+ 
