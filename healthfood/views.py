@@ -81,7 +81,7 @@ def update_healthfood(request, healthfood_id):
             healthfood_Form.save()
             messages.success(
                 request, f"New food {healthfood_Form.cleaned_data['title']} updated")
-            return redirect(reverse(index))
+            return redirect(reverse(landing))
 
         else:
 

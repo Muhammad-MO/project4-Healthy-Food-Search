@@ -52,11 +52,11 @@ input {
     transition: background-color .2s ease-out;
     cursor: pointer;
     width: 120px;
-    height: 32.33px;
+    height: 35px;
     font-size: 16px;
     border-radius: 5px;
     vertical-align: middle;
-    padding: 0px 20px 7px 20px;
+
     margin-left: 5px;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -84,7 +84,7 @@ a.btn.btn-info {
     transition: background-color .2s ease-out;
     cursor: pointer;
     width: 180px;
-    height: 32.33px;
+    height: 35px;
     font-size: 16px;
     border-radius: 5px;
     vertical-align: middle;
