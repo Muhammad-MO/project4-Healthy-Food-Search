@@ -1,6 +1,12 @@
 body {
 
-    background-color: #cab1ac;
+    /*background-color: #cab1ac;*/
+
+    background-image: url(/static/images/fruitbowl.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
 }
 
 
@@ -60,6 +66,26 @@ input {
     margin-left: 5px;
     font-family: 'Josefin Sans', sans-serif;
 }
+
+.btn-primary {
+    text-decoration: none;
+    color: black;
+    background-color: #f0e2e1;
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;
+    cursor: pointer;
+    width: 120px;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-left: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
 
 .card {
 
@@ -308,8 +334,6 @@ h1 {
 
     font-family: 'Josefin Sans', sans-serif;
     font-size: 60px;
-    position: relative;
-    left: 10px;
     color: black;
     padding: 10px;
 }
@@ -411,4 +435,14 @@ label.control-label.requiredField {
 a {
     font-size: 16px;
     color: black
+}
+
+.box {
+
+    widows: 500px;
+    height: 600px;
+    background-color: #b39485;
+    opacity: 0.7;
+    left: 200px;
+    margin-top: 10px;
 }
