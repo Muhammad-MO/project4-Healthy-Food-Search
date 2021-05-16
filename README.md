@@ -8,6 +8,19 @@ There is also a function where an admin can log in and perform CRUD on the produ
 
 ![picture](/static/images/screenshot.png)
 
+To test the Admin user, plese use the following login credentials
+
+** ADMIN **
+
+username: Admin
+password:admin12345
+
+** Public User **
+
+username:Uncle Roger
+password: haiyaa12345
+
+
 # Demo 
 
 A demo of the page can be seen [here](https://healthfoodmart.herokuapp.com/) on this link.
