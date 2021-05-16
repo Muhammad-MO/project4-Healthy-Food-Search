@@ -63,8 +63,9 @@
                     </li>
                 </ul>
 
-
+                <p class="m-3">Hi,{{request.user}}</p>
                 <a href="/accounts/logout" class="m-3">Logout</a>
+
 
                 <a href="{% url 'views_cart' %}"><img src="{% static 'images/cart.png' %}" alt="food" width="30"
                         height="30" class="rounded icon m-3">Shopping Cart ({{number_of_items}})</a>

@@ -4,11 +4,11 @@ We were presented with a task to reflect what we have learned about Python and D
 I took the opportunity to create a E-comerce websie where users can purchase healthy food items.
 The website is programmed with the ability to allow a consumer/user to search for their favourite healthfood , add it to the cart and purchase. The consumer 
 can also create reviews, delete reviews and see other reviews.
-There is also a function where an admin can log in and perform CRUD on the products either in the backend or from the frontend. Ths feature is only available to Admin or SuperUSer
+There is also a function where an admin can log in and perform CRUD on the products either in the backend or from the frontend. Ths feature is only available to Admin or SuperUser.
 
 ![picture](/static/images/screenshot.png)
 
-To test the Admin user, plese use the following login credentials
+To test the Admin user, plese use the following login credentials.
 
 ** ADMIN **
 
@@ -40,16 +40,16 @@ items leave a feedback and perform the same functions the user does.
 
 # Features left to implement
 
-The future plans for this website is to add discount and coupon popues for the past consumers
+The future plans for this website is to add discount and coupon popues for the past consumers.
 
-There are also plans to increase the Emart database and make the site searchable by producer and price
+There are also plans to increase the Emart database and make the site searchable by producer and price.
 # Deployment
 
 The website was deployed on Heroku and can be seen [here](https://healthfoodmart.herokuapp.com/)
 
 # Content
 
-All content was authored by me and referenced from pages which are mentioned in the Credit Section
+All content was authored by me and referenced from pages which are mentioned in the Credit Section.
 
 # Media
 
@@ -70,7 +70,7 @@ Pictures and icons for the home page were taken from
 
 # Credit
 
-References,Javascript and bootstrap codes were used from the following websites
+References,Javascript and bootstrap codes were used from the following websites.
 
 1. https://www.stackoverflow.com
 2. https://www.w3schools.com
@@ -103,7 +103,7 @@ References,Javascript and bootstrap codes were used from the following websites
 
 <h2> ********** Layout and Design ********** </h2>
 
-The page layout was designed with this deisgn originally as such using Adobe wireframe
+The page layout was designed with this deisgn originally as such using Adobe wireframe.
 
 ![picture](/static/images/wireframe1.png)
 
@@ -120,21 +120,20 @@ Logging in, will bring him /  her to the catalogue page where he / she can shop 
 ![picture](/static/images/screenshot2.png)
 
 A simple navigation bar allows the user to navigate through the website.
-A shopping cart icon which allows the user to see his / her shopping cart before checkout is located at the top right hand corner.
+A shopping cart icon which allows the user to see his / her shopping cart. before checkout is located at the top right hand corner.
+The logged in user is also displayed at the navigation bar.
 
 ![picture](/static/images/navigation_bar.png)
-
-
 
 Users can add in reviews as shows in the image below.
 
 ![picture](/static/images/screenshot3.png)
 
-Users can see the reviews as shows below
+Users can see the reviews as shows below.
 
 ![picture](/static/images/screenshot4.png)
 
-Users can also add to the catalogue as shown below
+Users can also add to the catalogue as shown below.
 
 ![picture](/static/images/screenshot5.png)
 
@@ -142,8 +141,8 @@ After adding items to their cart, the user can see what is currently in his / he
 
 ![picture](/static/images/viewcart.png)
 
-Upon checking out, users will be brought to the payment page
-The user will need to fill in the credit card details before being able to Checkout
+Upon checking out, users will be brought to the payment page.
+The user will need to fill in the credit card details before being able to checkout.
 
 ![picture](/static/images/checkout.png)
 
@@ -151,12 +150,7 @@ Upon successfully checking out, the user will be brought to a page showing the p
 
 ![picture](/static/images/payment_success.png)
 
-
-
-
 <h2> ********** Database ********** </h2>
-
-
 
 The database was created using Django.
 Food details including the maker are listed here.
@@ -178,20 +172,25 @@ For this project, it was intended to for one food manufacturer to have several d
 
  ![picture](/static/images/ERD.png) 
 
-
 # Validation
 
 The validation function works as planned.
 Users will need to fill in the necessaty details before submitting the from
-to add food items to the catalogue
+to add food items to the catalogue.
 
 ![picture](/static/images/validation.png)
 
 
-All field needs to be filled before a feedback can be submitted
+All field needs to be filled before a feedback can be submitted.
 
 ![picture](/static/images/validation2.png)
 
+HTML codes were validated with majority errors resolved
+
+![picture](/static/images/htmlvalidation.png)
+
+CSS codes were validated until there were no more errors
+![picture](/static/images/cssvalidator.png)
 
 
 
