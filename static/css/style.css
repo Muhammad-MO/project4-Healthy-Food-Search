@@ -454,12 +454,13 @@ a {
 
 .box2 {
 
-    width: 900px;
-    height: 400px;
+    width: 800px;
+    height: 500px;
     background-color: #b39485;
     opacity: 0.7;
-
+    position: relative;
     margin: 10px;
+    right: 10px;
     border-radius: 30px;
 }
 
