@@ -25,18 +25,18 @@
     {%for healthfood in healthfood %}
 
 
-    <div class="card m-3" style="width:18rem;">
+    <div class="card m-2" style="width:18rem; height:35rem;">
         <div class="card-body">
-            <a href="{% url 'view_healthfood_details' healthfood_id=healthfood.id %}"><img class="card-img-top mb-3"
+            <a href="{% url 'view_healthfood_details' healthfood_id=healthfood.id %}"><img class="card-img-top mb-2"
                     src="{{healthfood.image.cdn_url}}" alt="image"></a>
             <h6 class="card-title"> Name:{{healthfood.title}}</h6>
             <p class="card-title"> Cost:${{healthfood.cost}}</p>
             <p class="card-title"> Producer:{{healthfood.maker}}</p>
             <p>click on image to see more information</p>
         </div>
-        <a href="{% url 'add_to_cart' healthfood_id=healthfood.id %}" class="m-3"><img
+        <!--<a href="{% url 'add_to_cart' healthfood_id=healthfood.id %}" class="m-2"><img
                 src="{% static 'images/cart.png' %}" alt="food" width="30" height="30" class="rounded icon">Add to
-            Cart</a>
+            Cart</a>-->
 
 
 
@@ -46,6 +46,6 @@
     {%endfor%}
 
 
-</div>
+
 </div>
 {%endblock%}

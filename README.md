@@ -143,6 +143,8 @@ Upon successfully checking out, the user will be brought to a page showing the p
 
 <h2> ********** Database ********** </h2>
 
+
+
 The database was created using Django.
 Food details including the maker are listed here.
 The list of users and those detailing the superusers are are also found here.
@@ -152,6 +154,17 @@ The list of users and those detailing the superusers are are also found here.
 ![picture](/static/images/Djangodb2.png)
 
 ![picture](/static/images/Djangodb3.png)
+
+# Logical Schema Diagram
+
+The databse for this project was planned out using a logical schema diagram.
+For this project, it was intended to for one food manufacturer to have several different types of Food thus staisfying the One to Many relationship
+
+ A many to many relationship was also intended. In this case,
+ One Food item can have many reviews from different customers and one customer can give different reviews for each products
+
+ ![picture](/static/images/ERD.png) 
+
 
 # Validation
 
@@ -165,6 +178,11 @@ to add food items to the catalogue
 All field needs to be filled before a feedback can be submitted
 
 ![picture](/static/images/validation2.png)
+
+
+
+
+
 
 
 
