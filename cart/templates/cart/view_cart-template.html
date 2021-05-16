@@ -3,6 +3,8 @@
 {%block content %}
 
 <a href="{% url 'checkout' %}" class="btn btn-secondary m-3">Checkout</a>
+<a href="{% url 'show_healthfood_route' %}" class="btn btn-secondary btn-m3" style="width:100px">Browse</a>
+
 
 <div style="display:flex;flex-wrap:wrap">
 
@@ -10,7 +12,7 @@
 
 
 
-    <div class="card m-3" style="width:18rem;">
+    <div class="card m-3" style="width:25rem; height:25rem;">
         <div class="card-body">
 
             <h3 class="card-title">{{item.title}}</h3></br></br>
