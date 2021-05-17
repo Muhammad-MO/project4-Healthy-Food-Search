@@ -192,6 +192,16 @@ HTML codes were validated with majority errors resolved
 CSS codes were validated until there were no more errors
 ![picture](/static/images/cssvalidator.png)
 
+# Email Testing
+
+The user is able to sign up for an account and get a confirmation from healthfoodmart.
+
+![picture](/static/images/emailtest1.png)
+
+![picture](/static/images/emailtest2.png)
+
+
+
 
 
 
