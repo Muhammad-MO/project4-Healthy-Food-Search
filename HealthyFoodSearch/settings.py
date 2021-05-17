@@ -34,9 +34,9 @@ print(UPLOADCARE)
 SECRET_KEY = 'django-insecure-c-6yoz7*^5v1xd(u(220ie&#@3mqnf=5o@0e=^ycqs_*5jen_k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*', 'healthfoodmart.herokuapp.com']
+ALLOWED_HOSTS = ['healthfoodmart.herokuapp.com']
 
 
 # Application definition
