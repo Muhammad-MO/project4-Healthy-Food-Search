@@ -43,7 +43,7 @@ def add_to_cart(request, healthfood_id):
 def views_cart(request):
     cart = request.session.get('shopping_cart', {})
 
-    return render(request, 'cart/view_cart-template.html', {
+    return render(request, 'cart/view-cart-template.html', {
         'cart': cart
 
     })

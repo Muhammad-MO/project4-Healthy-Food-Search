@@ -160,6 +160,7 @@ textarea {
     border: none;
     background-color: white;
     height: 50px;
+    width: 280px;
 
 }
 
@@ -169,9 +170,25 @@ input#id_title {
     border: none;
     background-color: white;
     border-radius: 0px;
-    width: 300px;
+    width: 280px;
     margin: 3px;
 }
+
+input#id_title.textinput.textinput {
+
+    width: 280px;
+
+}
+
+
+border: none;
+background-color: white;
+border-radius: 0px;
+width: 280px;
+margin: 3px;
+}
+
+
 
 input#id_login {
 
