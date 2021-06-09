@@ -10,12 +10,12 @@ There is also a function where an admin can log in and perform CRUD on the produ
 
 To test the Admin user, plese use the following login credentials.
 
-** ADMIN **
+ADMIN 
 
 username: Admin
 password:admin12345
 
-** Public User **
+ Public User
 
 username:Uncle Roger
 password: haiyaa12345
@@ -46,6 +46,42 @@ There are also plans to increase the Emart database and make the site searchable
 # Deployment
 
 The website was deployed on Heroku and can be seen [here](https://healthfoodmart.herokuapp.com/)
+
+The following steps were taken to successfully deploy the app
+
+1) Install the fllowing dependencies
+pip3 install gunicorn
+pip3 install psycopg2
+pip3 install Pillow
+pip3 install whitenoise 
+pip3 install dj_database_url
+
+2) Add Whitenoise to your middleware inside settings.py:
+
+3) Initially repository
+
+4)Login to Heroku
+
+5) Double check if the Heroku App is created
+git remote -v 
+
+6)Copy environment variables from .env to heroku config variables
+![picture](/static/images/configvar.png)
+
+7) Created Procfile and inseretd the following. Ensure Procfile is in the same root folder location
+ web: gunicorn <PROJECT_FOLDER>.wsgi:application
+
+8) Install local requirements.
+pip3 freeze --local > requirements.txt
+
+9) Ensure static directory are typed out as such
+
+<img src="{% static "images/>filename" %}" alt="Hi!" />
+
+10) Deply by typing in
+git add .
+git commit -m "commit message"
+git push heroku master
 
 # Content
 
