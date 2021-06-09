@@ -43,6 +43,7 @@ items leave a feedback and perform the same functions the user does.
 The future plans for this website is to add discount and coupon popues for the past consumers.
 
 There are also plans to increase the Emart database and make the site searchable by producer and price.
+
 # Deployment
 
 The website was deployed on Heroku and can be seen [here](https://healthfoodmart.herokuapp.com/)
@@ -60,12 +61,12 @@ pip3 install dj_database_url
 
 3) Initially repository
 
-4)Login to Heroku
+4) Login to Heroku
 
 5) Double check if the Heroku App is created
 git remote -v 
 
-6)Copy environment variables from .env to heroku config variables
+6) Copy environment variables from .env to heroku config variables
 ![picture](/static/images/configvar.png)
 
 7) Created Procfile and inseretd the following. Ensure Procfile is in the same root folder location
@@ -76,12 +77,39 @@ pip3 freeze --local > requirements.txt
 
 9) Ensure static directory are typed out as such
 
-<img src="{% static "images/>filename" %}" alt="Hi!" />
+   <img src="{% static "images/>filename" %}" alt="Hi!" />
 
-10) Deply by typing in
-git add .
-git commit -m "commit message"
-git push heroku master
+10) Deply by typing in</br>
+git add . </br>
+git commit -m "commit message"</br>
+git push heroku master</br>
+
+# Testing
+
+| Item Tested         | Result            |   Expected Result                       |
+| --------------------|:-----------------:|:-------------------------------  |
+| Navbar-dropdown     | Works as intended | transforms into burger dropdown  |  
+| Log-in button       | Works as intended | bring user to login page and username appears on top right hand         |  
+| Log-out button      | Works as intended | bring user to landing page       | 
+| Sign up link.       | Works as intended | New users are able to sign up for an accoount     |
+| Image               | Works as intended | Let user see details of food     | | Add to Cart         | Works as intended | Users can add items to cart      
+|   Update Quantity        | Works as intended | Users can add items to cart 
+|  View Cart    | Works as intended | Users can see item and qty in cart   | 
+| Remove Items        | Works as intended | Users can remove items in cart   | 
+| Total Cost          | Works as intended | The total cost is calcuated      | 
+| Checkout            | Works as intended | Users can pay for the item and sucesfuly bring them to sucess checkout page.                                |  
+| Search              | Works as intended | Users can search for food        | 
+| Add Food            | Works as intended | Users can add to the list        |
+| Review Button.      | Works as intended | Users are able to see reviews    |
+| Add Review          | Works as intended | Users can give feedback          |
+| Delete Reviews.     | Works as intended | Users can delete reviews         |
+| admin/super user    | Works as intended |Superuser status can delete or edit food items    
+| Checkout.           | Works as intended | Users can pay for the item       |
+| Alert messages.     | Works as intended | Users will see a flash message when they - add items in cart 
+| Alert messages.     | Works as intended | Users will see a flash message when they - remove items in cart    
+| Alert messages.     | Works as intended | Users will see a flash message when they - add reviews
+| Alert messages.     | Works as intended | Users will see a flash message when they - delete reviews   
+| Responsiveness      | Works as intended | Site works well in mobile devices   |
 
 
 # Content
@@ -114,33 +142,10 @@ References,Javascript and bootstrap codes were used from the following websites.
 3. https://www.w3.org/
 4. https://getbootstrap.com/
 
-# Testing
 
-| Item Tested         | Result            |   Remarks                        |
-| --------------------|:-----------------:|:-------------------------------  |
-| Navbar-dropdown     | Works as intended | transforms into burger dropdown  |  
-| Log-in button       | Works as intended | bring user to login page         |  
-| Log-out button      | Works as intended | bring user to lanfing page       | 
-| Search Field        | Works as intended | User can search for their item   |  | Image               | Works as intended | Let user see details of food     |  | Add to Cart         | Works as intended | Users can add items to cart      
-|   Update Quantity        | Works as intended | Users can add items to cart 
-|  View Cart    | Works as intended | Users can see item and qty in cart   | 
-| Remove Items        | Works as intended | Users can remove items in cart   | 
-| Total Cost          | Works as intended | The total cost is calcuated      | 
-| Checkout            | Works as intended | Users can pay for the item and sucesfuly bring them to sucess checkout page.      |  
-| Search              | Works as intended | Users can search for food        |  | Add Food            | Works as intended | Users can add to the list        |
-| Review Button.      | Works as intended | Users are able to see reviews    |
-| Add Review          | Works as intended | Users can give feedback          |
-| Delete Reviews.     | Works as intended | Users can delete reviews         |
-| admin/super user    | Works as intended |Superuser status can delete or edit food items    
-| Checkout.           | Works as intended | Users can pay for the item       |
-| Alert messages.     | Works as intended | Users will see a flash message when they - add items in cart 
-| Alert messages.     | Works as intended | Users will see a flash message when they - remove items in cart    
-| Alert messages.     | Works as intended | Users will see a flash message when they - add reviews
-| Alert messages.     | Works as intended | Users will see a flash message when they - delete reviews   
-| Responsiveness      | Works as intended | Site works well in mobile devices       |
 # Page Structure Design 
 
-<h2> ********** Layout and Design ********** </h2>
+<h2> Layout and Design  </h2>
 
 The page layout was designed with this deisgn originally as such using Adobe wireframe.
 
@@ -189,7 +194,7 @@ Upon successfully checking out, the user will be brought to a page showing the p
 
 ![picture](/static/images/payment_success.png)
 
-<h2> ********** Database ********** </h2>
+<h2>Database</h2>
 
 The database was created using Django.
 Food details including the maker are listed here.
