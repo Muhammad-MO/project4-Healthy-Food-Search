@@ -83,6 +83,7 @@ git add .
 git commit -m "commit message"
 git push heroku master
 
+
 # Content
 
 All content was authored by me and referenced from pages which are mentioned in the Credit Section.
@@ -120,10 +121,12 @@ References,Javascript and bootstrap codes were used from the following websites.
 | Navbar-dropdown     | Works as intended | transforms into burger dropdown  |  
 | Log-in button       | Works as intended | bring user to login page         |  
 | Log-out button      | Works as intended | bring user to lanfing page       | 
-| Search Field        | Works as intended | User can search for their item   |  | Image               | Works as intended | Let user see details of food     |  | Add to Cart         | Works as intended | Users can add items to cart      |  | Update Quantity     | Works as intended | Users can increase qty in cart   | 
+| Search Field        | Works as intended | User can search for their item   |  | Image               | Works as intended | Let user see details of food     |  | Add to Cart         | Works as intended | Users can add items to cart      
+|   Update Quantity        | Works as intended | Users can add items to cart 
+|  View Cart    | Works as intended | Users can see item and qty in cart   | 
 | Remove Items        | Works as intended | Users can remove items in cart   | 
 | Total Cost          | Works as intended | The total cost is calcuated      | 
-| Checkout            | Works as intended | Users can pay for the item and sucesfuly bring them to sucess chckout page.      |  
+| Checkout            | Works as intended | Users can pay for the item and sucesfuly bring them to sucess checkout page.      |  
 | Search              | Works as intended | Users can search for food        |  | Add Food            | Works as intended | Users can add to the list        |
 | Review Button.      | Works as intended | Users are able to see reviews    |
 | Add Review          | Works as intended | Users can give feedback          |
@@ -134,7 +137,7 @@ References,Javascript and bootstrap codes were used from the following websites.
 | Alert messages.     | Works as intended | Users will see a flash message when they - remove items in cart    
 | Alert messages.     | Works as intended | Users will see a flash message when they - add reviews
 | Alert messages.     | Works as intended | Users will see a flash message when they - delete reviews   
-
+| Responsiveness      | Works as intended | Site works well in mobile devices       |
 # Page Structure Design 
 
 <h2> ********** Layout and Design ********** </h2>
